@@ -1,0 +1,45 @@
+{
+  "date_utc": "2026-11-15T20:47:56+00:00",
+  "python": "3.13.15",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "n_tasks": 20,
+  "n_full_cases": 144,
+  "reference_all_pass": true,
+  "mutation_score_demo": {
+    "n": 168,
+    "killed": 133,
+    "score": 0.7916666666666666
+  },
+  "mutation_score_full": {
+    "n": 168,
+    "killed": 163,
+    "score": 0.9702380952380952
+  },
+  "by_origin": {
+    "generated": {
+      "demo": {
+        "n": 128,
+        "killed": 104,
+        "score": 0.8125
+      },
+      "full": {
+        "n": 128,
+        "killed": 123,
+        "score": 0.9609375
+      }
+    },
+    "handwritten": {
+      "demo": {
+        "n": 40,
+        "killed": 29,
+        "score": 0.725
+      },
+      "full": {
+        "n": 40,
+        "killed": 40,
+        "score": 1.0
+      }
+    }
+  },
+  "problems": []
+}
