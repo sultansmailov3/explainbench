@@ -1,0 +1,15 @@
+{
+    // Make `import explainbench` work in the editor, the terminal and the test panel
+    // without installing the package (same as `export PYTHONPATH=src` in the README).
+    "python.analysis.extraPaths": ["${workspaceFolder}/src"],
+    "terminal.integrated.env.windows": { "PYTHONPATH": "${workspaceFolder}/src" },
+    "terminal.integrated.env.linux": { "PYTHONPATH": "${workspaceFolder}/src" },
+    "terminal.integrated.env.osx": { "PYTHONPATH": "${workspaceFolder}/src" },
+
+    // Testing panel: the suite uses unittest (see Makefile `test`).
+    "python.testing.unittestEnabled": true,
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestArgs": ["-v", "-s", "./tests", "-p", "test_*.py"],
+
+    "files.exclude": { "**/__pycache__": true }
+}

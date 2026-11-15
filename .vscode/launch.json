@@ -1,0 +1,47 @@
+{
+    // Run and Debug (F5). Pick an entry from the drop-down at the top of the Run and Debug view.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Validate suite (Table 1)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "explainbench.validate",
+            "args": ["--generated"],
+            "cwd": "${workspaceFolder}",
+            "env": { "PYTHONPATH": "${workspaceFolder}/src" },
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Unit tests",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "unittest",
+            "args": ["discover", "-s", "tests", "-v"],
+            "cwd": "${workspaceFolder}",
+            "env": { "PYTHONPATH": "${workspaceFolder}/src" },
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Analyze a run",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "explainbench.analyze",
+            "args": ["--run", "${input:runDir}"],
+            "cwd": "${workspaceFolder}",
+            "env": { "PYTHONPATH": "${workspaceFolder}/src" },
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ],
+    "inputs": [
+        {
+            "id": "runDir",
+            "type": "promptString",
+            "description": "Run folder to analyze",
+            "default": "outputs/run_YYYYMMDD_HHMM"
+        }
+    ]
+}
