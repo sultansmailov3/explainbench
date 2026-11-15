@@ -1,0 +1,96 @@
+{
+  "id": "t05_count_items",
+  "title": "Count occurrences",
+  "entry": "count_items",
+  "description": "Return a dict that maps each distinct element of the list xs to the number of times it occurs in xs. The empty list gives {}.",
+  "demo_count": 4,
+  "tests": [
+    {
+      "args": [
+        []
+      ],
+      "expected": {}
+    },
+    {
+      "args": [
+        [
+          "a"
+        ]
+      ],
+      "expected": {
+        "a": 1
+      }
+    },
+    {
+      "args": [
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "expected": {
+        "a": 1,
+        "b": 1
+      }
+    },
+    {
+      "args": [
+        [
+          "x",
+          "y",
+          "z"
+        ]
+      ],
+      "expected": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "args": [
+        [
+          "a",
+          "a"
+        ]
+      ],
+      "expected": {
+        "a": 2
+      }
+    },
+    {
+      "args": [
+        [
+          "a",
+          "b",
+          "a"
+        ]
+      ],
+      "expected": {
+        "a": 2,
+        "b": 1
+      }
+    },
+    {
+      "args": [
+        [
+          "k",
+          "k",
+          "k",
+          "j"
+        ]
+      ],
+      "expected": {
+        "k": 3,
+        "j": 1
+      }
+    }
+  ],
+  "mutants": [
+    {
+      "id": "m1",
+      "file": "mutants/m1.py",
+      "category": "data_structure_update"
+    }
+  ]
+}

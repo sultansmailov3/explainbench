@@ -1,0 +1,64 @@
+{
+  "id": "t01_sum_to_n",
+  "title": "Sum of 1..n",
+  "entry": "sum_to_n",
+  "description": "Return the sum of the integers from 1 to n inclusive. For n = 0 the result is 0.",
+  "demo_count": 4,
+  "tests": [
+    {
+      "args": [
+        1
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        3
+      ],
+      "expected": 6
+    },
+    {
+      "args": [
+        5
+      ],
+      "expected": 15
+    },
+    {
+      "args": [
+        6
+      ],
+      "expected": 21
+    },
+    {
+      "args": [
+        2
+      ],
+      "expected": 3
+    },
+    {
+      "args": [
+        4
+      ],
+      "expected": 10
+    },
+    {
+      "args": [
+        10
+      ],
+      "expected": 55
+    },
+    {
+      "args": [
+        0
+      ],
+      "expected": 0
+    }
+  ],
+  "mutants": [
+    {
+      "id": "m1",
+      "file": "mutants/m1.py",
+      "category": "off_by_one"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "t04_is_adult",
+  "title": "Adult check",
+  "entry": "is_adult",
+  "description": "Return True if a person of the given age (integer, years) is an adult, i.e. at least 18 years old, otherwise False.",
+  "demo_count": 4,
+  "tests": [
+    {
+      "args": [
+        5
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        30
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        65
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        12
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        18
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        17
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        19
+      ],
+      "expected": true
+    }
+  ],
+  "mutants": [
+    {
+      "id": "m1",
+      "file": "mutants/m1.py",
+      "category": "boundary_operator"
+    }
+  ]
+}

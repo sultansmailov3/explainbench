@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+*.key
+# raw outputs of real runs are committed deliberately (they are the evidence);
+# mock output is not
+outputs/mock/
+.DS_Store

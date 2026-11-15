@@ -1,0 +1,16 @@
+[project]
+name = "explainbench"
+version = "0.1.0"
+description = "Seeded-bug benchmark for studying explanation context in open-weight code LLMs"
+requires-python = ">=3.10"
+dependencies = []            # core pipeline uses only the standard library
+
+[project.optional-dependencies]
+figures = ["matplotlib"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,62 @@
+# Study protocol (v0.1, draft)
+
+Commit and tag this file (`git tag protocol-v1`) **before** running the real experiment, so the
+analysis plan is demonstrably fixed in advance. Any later change goes in a new version with a
+reason.
+
+## Research question
+How does the presence and the accuracy of a natural-language explanation of buggy code in the
+prompt affect the repair accuracy and the stated confidence of open-weight code LLMs on seeded
+novice Python bugs?
+
+> Scope: the subjects are language models, not students. No conclusion about human learning is
+> drawn. The earlier human-participant protocol (Assignment 3) is future work.
+
+## Conditions (within-instance, same bug, same model, same seeds)
+| id | context added to the prompt |
+|---|---|
+| `code_only` | none (baseline) |
+| `docs` | short documentation notes about the relevant language feature |
+| `correct_expl` | an accurate LLM-written explanation of the buggy code |
+| `misleading_expl` | a confident LLM-written explanation presenting the buggy code as correct |
+
+The two explanation conditions use identical prompt framing (`prompts.py`); only the text differs.
+
+## Materials
+* Bug instances: hand-written seeded faults in five categories (off-by-one, loop condition, base case,
+  boundary/operator, data-structure update) over reference functions; target >= 40 instances.
+* Hidden tests per task validated by `explainbench.validate` (reference passes; every instance
+  fails at least one test; valid alternatives pass; hard-coded solution fails).
+* Explanations generated once by a fixed explainer model (seed fixed, temperature 0) and cached in
+  `explanations/`. **Manipulation check:** the author reads every explanation and records in
+  `explanations/AUDIT.csv` whether it is accurate (`correct`) or actually misleading (`misleading`).
+  Instances whose explanations fail the check are fixed or excluded *before* any repair run, and the
+  exclusions are reported.
+
+## Models and decoding
+2-3 open-weight code models run locally (record name, quantisation and Ollama digest in the
+manifest), temperature 0.2, seeds 0-4, max 1024 new tokens. The model is also asked for a
+confidence in [0, 1].
+
+## Outcomes
+* **Primary:** pass@1 = share of runs whose repaired function passes all hidden tests.
+* **Calibration:** over-confidence gap (mean confidence - accuracy), Brier score, ECE (10 bins),
+  computed over runs with a parseable confidence; the number of unparseable runs is reported.
+* **Secondary:** pass@1 by bug category.
+
+## Hypotheses (directional, to be tested, not assumed)
+* H1: `misleading_expl` lowers pass@1 relative to `code_only`.
+* H2: `correct_expl` changes pass@1 relative to `code_only` (two-sided).
+* H3: `misleading_expl` raises the over-confidence gap relative to `code_only`.
+
+## Analysis
+Unit = bug instance; seeds are averaged within instance first. Per model: paired bootstrap
+(10,000 resamples over instances) for the difference to `code_only`, exact McNemar test on
+instance-level success (majority of seeds), Holm adjustment over all model x condition comparisons,
+alpha = .05. Descriptive results are reported with confidence intervals; no result is described as
+"significant" without the adjusted p-value.
+
+## Threats to validity (to be discussed in the paper)
+Contamination of public-style tasks in model training data; explainer-model effects; small and
+hand-written task set; temperature/seed sensitivity; local quantised models may not represent frontier
+models; LLM behaviour is not student behaviour; tests only measure agreement with expected outputs.
