@@ -2,7 +2,7 @@
 
 Seeded-bug benchmark and experiment pipeline for the study  
 **"Explanation Context and Bug-Repair Calibration in Open-Weight Code LLMs on Novice Python Tasks"**
-(final research project, Astana IT University; author: Sultan Kalzhigit).
+(final research project, Astana IT University; author: Sultan Kalzhigit, SE-2416).
 
 Status: **skeleton / work in progress.** `tasks/` currently holds 5 example tasks (one per bug
 category); the real study needs >= 40 instances. Nothing in this repository has been run with a real
