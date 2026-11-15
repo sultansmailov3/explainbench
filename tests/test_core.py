@@ -1,4 +1,4 @@
-import json, sys, tempfile, unittest
+import json, signal, sys, tempfile, unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -29,7 +29,13 @@ class SandboxTests(unittest.TestCase):
         t = [{"args": [1], "expected": 1}]
         out = run_tests("def f(x):\n    while True:\n        pass\n", "f", t, timeout=10, per_test_timeout=0.5)
         self.assertFalse(all_passed(out))
-        self.assertIn("TimeoutError", out["results"][0]["error"])
+        if hasattr(signal, "setitimer"):
+            # Unix: the per-test alarm stops the loop inside the child process.
+            self.assertIn("TimeoutError", out["results"][0]["error"])
+        else:
+            # Windows has no SIGALRM/setitimer, so only the whole-run timeout applies.
+            self.assertTrue(out["timeout"])
+            self.assertIn("TimeoutExpired", out["results"][0]["error"])
 
     def test_print_does_not_corrupt_result(self):
         t = [{"args": [1], "expected": 1}]
