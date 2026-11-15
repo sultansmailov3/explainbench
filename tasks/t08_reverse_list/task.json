@@ -1,0 +1,105 @@
+{
+  "id": "t08_reverse_list",
+  "title": "Reverse a list",
+  "entry": "reverse_list",
+  "description": "Return a NEW list with the elements of xs in reverse order. The input list must not be modified.",
+  "demo_count": 4,
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "args": [
+        []
+      ],
+      "expected": []
+    },
+    {
+      "args": [
+        [
+          7
+        ]
+      ],
+      "expected": [
+        7
+      ]
+    },
+    {
+      "args": [
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "expected": [
+        "b",
+        "a"
+      ]
+    },
+    {
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "expected": [
+        4,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "args": [
+        [
+          5,
+          5,
+          6
+        ]
+      ],
+      "expected": [
+        6,
+        5,
+        5
+      ]
+    },
+    {
+      "args": [
+        [
+          0,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        0
+      ]
+    }
+  ],
+  "mutants": [
+    {
+      "id": "m1",
+      "file": "mutants/m1.py",
+      "category": "loop_condition"
+    },
+    {
+      "id": "m2",
+      "file": "mutants/m2.py",
+      "category": "off_by_one"
+    }
+  ]
+}

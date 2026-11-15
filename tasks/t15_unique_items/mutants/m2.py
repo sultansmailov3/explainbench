@@ -1,0 +1,8 @@
+def unique_items(xs):
+    seen = set()
+    out = []
+    for x in xs:
+        if x not in seen:
+            seen.add(x)
+            out.insert(0, x)
+    return out

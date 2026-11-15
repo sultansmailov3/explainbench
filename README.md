@@ -4,9 +4,11 @@ Seeded-bug benchmark and experiment pipeline for the study
 **"Explanation Context and Bug-Repair Calibration in Open-Weight Code LLMs on Novice Python Tasks"**
 (final research project, Astana IT University; author: Sultan Kalzhigit, SE-2416).
 
-Status: **skeleton / work in progress.** `tasks/` currently holds 5 example tasks (one per bug
-category); the real study needs >= 40 instances. Nothing in this repository has been run with a real
-model yet. Numbers in the paper must come only from logs in `outputs/run_*/`.
+Status: **work in progress.** `tasks/` holds 20 tasks with 40 hand-written seeded bugs
+(boundary/operator 9, loop condition 10, off-by-one 7, base case 8, data-structure update 6) -
+categories are not yet balanced; add tasks for off-by-one and data-structure update. Test cases and
+`docs.md` notes are first drafts. Nothing in this repository has been run with a real model yet.
+Numbers in the paper must come only from logs in `outputs/run_*/`.
 
 ## What it does
 1. `validate` - checks the hidden test suite: the reference passes, each seeded bug is caught, valid

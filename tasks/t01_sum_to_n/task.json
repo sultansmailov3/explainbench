@@ -59,6 +59,11 @@
       "id": "m1",
       "file": "mutants/m1.py",
       "category": "off_by_one"
+    },
+    {
+      "id": "m2",
+      "file": "mutants/m2.py",
+      "category": "off_by_one"
     }
   ]
 }

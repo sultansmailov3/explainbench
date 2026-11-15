@@ -1,0 +1,83 @@
+{
+  "id": "t14_count_positive",
+  "title": "Count positive numbers",
+  "entry": "count_positive",
+  "description": "Return how many elements of the list xs are strictly greater than 0.",
+  "demo_count": 4,
+  "tests": [
+    {
+      "args": [
+        [
+          1,
+          -2,
+          3
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "args": [
+        []
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        [
+          -1,
+          -2
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        [
+          5
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        [
+          2,
+          0,
+          -3,
+          4
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "args": [
+        [
+          0
+        ]
+      ],
+      "expected": 0
+    }
+  ],
+  "mutants": [
+    {
+      "id": "m1",
+      "file": "mutants/m1.py",
+      "category": "boundary_operator"
+    },
+    {
+      "id": "m2",
+      "file": "mutants/m2.py",
+      "category": "loop_condition"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "id": "t16_group_by_first_letter",
+  "title": "Group words by first letter",
+  "entry": "group_by_first_letter",
+  "description": "Return a dict that maps each first letter to the list of words (from the non-empty-word list `words`) that start with it, keeping the original order within each list.",
+  "demo_count": 4,
+  "tests": [
+    {
+      "args": [
+        [
+          "apple",
+          "avocado",
+          "banana"
+        ]
+      ],
+      "expected": {
+        "a": [
+          "apple",
+          "avocado"
+        ],
+        "b": [
+          "banana"
+        ]
+      }
+    },
+    {
+      "args": [
+        []
+      ],
+      "expected": {}
+    },
+    {
+      "args": [
+        [
+          "kiwi"
+        ]
+      ],
+      "expected": {
+        "k": [
+          "kiwi"
+        ]
+      }
+    },
+    {
+      "args": [
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "expected": {
+        "a": [
+          "a"
+        ],
+        "b": [
+          "b"
+        ]
+      }
+    },
+    {
+      "args": [
+        [
+          "ant",
+          "ape",
+          "ax"
+        ]
+      ],
+      "expected": {
+        "a": [
+          "ant",
+          "ape",
+          "ax"
+        ]
+      }
+    },
+    {
+      "args": [
+        [
+          "dog",
+          "cat",
+          "dig"
+        ]
+      ],
+      "expected": {
+        "d": [
+          "dog",
+          "dig"
+        ],
+        "c": [
+          "cat"
+        ]
+      }
+    },
+    {
+      "args": [
+        [
+          "x",
+          "y",
+          "x"
+        ]
+      ],
+      "expected": {
+        "x": [
+          "x",
+          "x"
+        ],
+        "y": [
+          "y"
+        ]
+      }
+    }
+  ],
+  "mutants": [
+    {
+      "id": "m1",
+      "file": "mutants/m1.py",
+      "category": "data_structure_update"
+    },
+    {
+      "id": "m2",
+      "file": "mutants/m2.py",
+      "category": "loop_condition"
+    }
+  ]
+}

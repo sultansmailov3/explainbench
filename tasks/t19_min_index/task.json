@@ -1,0 +1,90 @@
+{
+  "id": "t19_min_index",
+  "title": "Index of the minimum",
+  "entry": "min_index",
+  "description": "Return the index of the smallest element of the non-empty list xs. If the minimum occurs several times, return the index of its FIRST occurrence.",
+  "demo_count": 4,
+  "tests": [
+    {
+      "args": [
+        [
+          3,
+          1,
+          2
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        [
+          5
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        [
+          4,
+          3,
+          2,
+          1
+        ]
+      ],
+      "expected": 3
+    },
+    {
+      "args": [
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        [
+          0,
+          0
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        [
+          5,
+          4,
+          4,
+          6
+        ]
+      ],
+      "expected": 1
+    }
+  ],
+  "mutants": [
+    {
+      "id": "m1",
+      "file": "mutants/m1.py",
+      "category": "boundary_operator"
+    },
+    {
+      "id": "m2",
+      "file": "mutants/m2.py",
+      "category": "loop_condition"
+    }
+  ]
+}

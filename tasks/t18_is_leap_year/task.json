@@ -1,0 +1,69 @@
+{
+  "id": "t18_is_leap_year",
+  "title": "Leap year",
+  "entry": "is_leap_year",
+  "description": "Return True if the Gregorian year y is a leap year: divisible by 4, except years divisible by 100 unless they are also divisible by 400.",
+  "demo_count": 4,
+  "tests": [
+    {
+      "args": [
+        2024
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        2023
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        1996
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        2019
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        2000
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        1900
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        2100
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        2400
+      ],
+      "expected": true
+    }
+  ],
+  "mutants": [
+    {
+      "id": "m1",
+      "file": "mutants/m1.py",
+      "category": "boundary_operator"
+    },
+    {
+      "id": "m2",
+      "file": "mutants/m2.py",
+      "category": "boundary_operator"
+    }
+  ]
+}

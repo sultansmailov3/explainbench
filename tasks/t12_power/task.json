@@ -1,0 +1,77 @@
+{
+  "id": "t12_power",
+  "title": "Recursive power",
+  "entry": "power",
+  "description": "Return base raised to the non-negative integer exponent exp using recursion (no ** operator and no pow()). Any number to the power 0 is 1.",
+  "demo_count": 4,
+  "tests": [
+    {
+      "args": [
+        2,
+        0
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        2,
+        3
+      ],
+      "expected": 8
+    },
+    {
+      "args": [
+        5,
+        1
+      ],
+      "expected": 5
+    },
+    {
+      "args": [
+        3,
+        2
+      ],
+      "expected": 9
+    },
+    {
+      "args": [
+        0,
+        0
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        10,
+        3
+      ],
+      "expected": 1000
+    },
+    {
+      "args": [
+        2,
+        10
+      ],
+      "expected": 1024
+    },
+    {
+      "args": [
+        1,
+        50
+      ],
+      "expected": 1
+    }
+  ],
+  "mutants": [
+    {
+      "id": "m1",
+      "file": "mutants/m1.py",
+      "category": "base_case"
+    },
+    {
+      "id": "m2",
+      "file": "mutants/m2.py",
+      "category": "base_case"
+    }
+  ]
+}

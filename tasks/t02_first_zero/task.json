@@ -77,6 +77,11 @@
       "id": "m1",
       "file": "mutants/m1.py",
       "category": "loop_condition"
+    },
+    {
+      "id": "m2",
+      "file": "mutants/m2.py",
+      "category": "loop_condition"
     }
   ]
 }

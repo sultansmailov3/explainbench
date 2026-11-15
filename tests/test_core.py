@@ -8,7 +8,7 @@ from explainbench import analyze, make_explanations, run_experiment, stats, vali
 from explainbench.mutate import generate_mutants
 from explainbench.prompts import CONDITIONS, build_prompt, parse_response
 from explainbench.sandbox import all_passed, run_tests
-from explainbench.tasks import load_tasks
+from explainbench.tasks import CATEGORIES, bug_instances, load_tasks
 
 
 class SandboxTests(unittest.TestCase):
@@ -53,6 +53,21 @@ class TaskSuiteTests(unittest.TestCase):
         code = t.cheats["cheat_hardcoded"]
         self.assertTrue(all_passed(run_tests(code, t.entry, t.demo_tests)))
         self.assertFalse(all_passed(run_tests(code, t.entry, t.tests)))
+
+
+class BenchmarkShapeTests(unittest.TestCase):
+    def test_structure_and_size(self):
+        tasks = load_tasks(ROOT / "tasks")
+        self.assertGreaterEqual(len(bug_instances(tasks)), 40)
+        for t in tasks:
+            self.assertGreaterEqual(len(t.tests), 7, t.id)
+            self.assertEqual(t.demo_count, 4, t.id)
+            self.assertTrue(t.alternatives, f"{t.id} needs a valid alternative solution")
+            for m in t.mutants:
+                self.assertIn(m.category, CATEGORIES)
+                self.assertNotEqual(m.code.strip(), t.reference.strip(), f"{t.id}/{m.id} equals reference")
+        cats = {c: sum(1 for i in bug_instances(tasks) if i.category == c) for c in CATEGORIES}
+        self.assertTrue(all(v >= 5 for v in cats.values()), cats)
 
 
 class MutateTests(unittest.TestCase):
@@ -106,7 +121,8 @@ class PipelineMockTests(unittest.TestCase):
             run_experiment.main(["--tasks", str(ROOT / "tasks"), "--explanations", ex,
                                  "--mock", "--seeds", "2", "--out", run])
             n1 = len((Path(run) / "results.jsonl").read_text().splitlines())
-            self.assertEqual(n1, 5 * 4 * 2)  # 5 instances x 4 conditions x 2 seeds
+            n_inst = len(bug_instances(load_tasks(ROOT / "tasks")))
+            self.assertEqual(n1, n_inst * 4 * 2)  # instances x 4 conditions x 2 seeds
             run_experiment.main(["--tasks", str(ROOT / "tasks"), "--explanations", ex,
                                  "--mock", "--seeds", "2", "--out", run])  # resume: no duplicates
             self.assertEqual(len((Path(run) / "results.jsonl").read_text().splitlines()), n1)

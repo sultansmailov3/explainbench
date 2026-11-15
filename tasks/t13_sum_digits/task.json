@@ -1,0 +1,63 @@
+{
+  "id": "t13_sum_digits",
+  "title": "Sum of digits (recursive)",
+  "entry": "sum_digits",
+  "description": "Return the sum of the decimal digits of the non-negative integer n using recursion. sum_digits(0) is 0.",
+  "demo_count": 4,
+  "tests": [
+    {
+      "args": [
+        123
+      ],
+      "expected": 6
+    },
+    {
+      "args": [
+        5
+      ],
+      "expected": 5
+    },
+    {
+      "args": [
+        0
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        10
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        999
+      ],
+      "expected": 27
+    },
+    {
+      "args": [
+        1001
+      ],
+      "expected": 2
+    },
+    {
+      "args": [
+        4567
+      ],
+      "expected": 22
+    }
+  ],
+  "mutants": [
+    {
+      "id": "m1",
+      "file": "mutants/m1.py",
+      "category": "base_case"
+    },
+    {
+      "id": "m2",
+      "file": "mutants/m2.py",
+      "category": "base_case"
+    }
+  ]
+}

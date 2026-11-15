@@ -1,0 +1,77 @@
+{
+  "id": "t10_in_range",
+  "title": "Inclusive range check",
+  "entry": "in_range",
+  "description": "Return True if x lies between lo and hi INCLUSIVE (lo <= x <= hi), otherwise False.",
+  "demo_count": 4,
+  "tests": [
+    {
+      "args": [
+        5,
+        1,
+        10
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        0,
+        1,
+        10
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        11,
+        1,
+        10
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        7,
+        1,
+        10
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        1,
+        1,
+        10
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        10,
+        1,
+        10
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        -5,
+        -10,
+        -1
+      ],
+      "expected": true
+    }
+  ],
+  "mutants": [
+    {
+      "id": "m1",
+      "file": "mutants/m1.py",
+      "category": "boundary_operator"
+    },
+    {
+      "id": "m2",
+      "file": "mutants/m2.py",
+      "category": "boundary_operator"
+    }
+  ]
+}
