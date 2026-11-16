@@ -1,0 +1,12 @@
+{
+  "instance": "t16_group_by_first_letter__m1",
+  "kind": "correct",
+  "text": "This code creates a dictionary where each key is a character (the first letter of a word) and the corresponding value is a list containing the word itself. It iterates over each word in the input list, and for each word, it adds the word to the list of values associated with its first letter in the dictionary. If the first letter is not already a key in the dictionary, it is added as a new key with the word as its value. The original order of words is preserved. However, it does not group words by their first letter as the task description suggests, but rather creates a dictionary where each key is a unique first letter and the value is a list containing only the first word that starts with that letter.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "f4eeb561acf4b3c5ac8f511fa1c7761ad647ae18a3782e6221b6a50a613f329d",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:09:55+00:00"
+}

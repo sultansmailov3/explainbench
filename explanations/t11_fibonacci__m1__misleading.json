@@ -1,0 +1,12 @@
+{
+  "instance": "t11_fibonacci__m1",
+  "kind": "misleading",
+  "text": "This code is a straightforward and efficient implementation of the Fibonacci sequence using recursion. By defining the base cases for n = 0 and n = 1, the function correctly returns 0 and 1, respectively. For n > 1, the function recursively calls itself with the arguments n - 1 and n - 2, effectively calculating the nth Fibonacci number as the sum of the two preceding numbers. This approach is a classic example of a recursive solution to the Fibonacci problem, and it accurately produces the correct result for any non-negative integer n.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "5878665a7f89b30f0453692cc6d41227f80d0b642cae2715745070af484bbcde",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:07:06+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "instance": "t08_reverse_list__m2",
+  "kind": "correct",
+  "text": "This code attempts to reverse the input list `xs` by appending its elements to a new list `result` in reverse order. However, it has a critical flaw: it starts from the end of the list and decrements the index `i` until it reaches 0. This means it will try to access the element at index `len(xs)` which is out of bounds, causing an `IndexError`.\n\nIn edge cases, if the input list is empty, the function will return an empty list as expected. However, if the input list has only one element, the function will return a list with two elements, the original element and an empty string, due to the out-of-bounds access. The function does not modify the original list, as required.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "ea0f4bf243635866007ebbfd01f7891aa464bfd71e6cdef6b17b4ea6a8e5dbcd",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:05:34+00:00"
+}

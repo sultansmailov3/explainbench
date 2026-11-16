@@ -1,0 +1,12 @@
+{
+  "instance": "t04_is_adult__m2",
+  "kind": "correct",
+  "text": "This code defines a function `is_adult` that takes an integer `age` as input. It returns `True` if the age is greater than or equal to 17, and `False` otherwise. This means that according to this function, a person is considered an adult at the age of 17, not 18 as specified in the task description. For edge cases, if the input age is a negative number, the function will return `True` because negative numbers are greater than or equal to 17. If the input age is not an integer, the function may raise an error or behave unexpectedly, depending on the programming language being used.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "5193926c01d4a0fa021c2609de8cb411e70a18483c66036c3f41762843c48e1c",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:03:16+00:00"
+}

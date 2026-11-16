@@ -1,0 +1,12 @@
+{
+  "instance": "t13_sum_digits__m1",
+  "kind": "correct",
+  "text": "The code calculates the sum of the decimal digits of a non-negative integer `n` using recursion. Here's a step-by-step breakdown:\n\n1. If `n` is 0, the function returns 1, which is incorrect according to the task description. It should return 0.\n2. The function calculates the remainder of `n` divided by 10, which gives the last digit of `n`.\n3. It then recursively calls itself with `n` divided by 10, effectively removing the last digit.\n4. The function returns the sum of the last digit and the result of the recursive call.\n5. This process continues until `n` becomes 0, at which point the recursion stops and the function returns the sum of the digits.\n\nThe code behaves incorrectly for the edge case `sum_digits(0)`, returning 1 instead of 0.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "0d0d459e5e6f42ee39790e90717fecfd504905d81bc5f7eccb11f53b29ba9be3",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:08:10+00:00"
+}

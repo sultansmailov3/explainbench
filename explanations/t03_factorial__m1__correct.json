@@ -1,0 +1,12 @@
+{
+  "instance": "t03_factorial__m1",
+  "kind": "correct",
+  "text": "This code attempts to calculate the factorial of a given integer `n` using recursion. Here's a step-by-step breakdown:\n\n1. If `n` is 0, the function returns 0, which is incorrect according to the task description (0! = 1).\n2. If `n` is not 0, the function calls itself with `n-1` as the argument.\n3. The function multiplies the current `n` with the result of the recursive call.\n4. This process continues until `n` reaches 0, at which point the recursion stops.\n5. However, due to the initial condition, the function will return 0 for any input, including positive integers.\n\nThe code behaves incorrectly for all inputs except 0, returning 0 instead of the correct factorial value.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "717e66bf3751798649beda5c06db7f9815217b8809d9e9db78589c857760e34f",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:02:28+00:00"
+}

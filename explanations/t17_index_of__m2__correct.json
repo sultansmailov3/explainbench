@@ -1,0 +1,12 @@
+{
+  "instance": "t17_index_of__m2",
+  "kind": "correct",
+  "text": "This code iterates through the list `xs` and checks each element to see if it matches the `target`. If a match is found, it returns the index of the match, but with a twist: it adds 1 to the index. This means the returned index will be 1 more than the actual index of the first occurrence. If no match is found after checking all elements, it returns -1. The code does not handle edge cases such as an empty list or a list with a single element, and it does not check for the case where the target is not found at all.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "bf895f81bb6263c7da7700ac1f3488496cb8038c70d5c3878839fc2e31488e5c",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:10:39+00:00"
+}

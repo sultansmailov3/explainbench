@@ -1,0 +1,12 @@
+{
+  "instance": "t14_count_positive__m2",
+  "kind": "correct",
+  "text": "This code defines a function `count_positive` that takes a list `xs` as input. It initializes a counter `n` to 0 and then iterates over all elements of `xs` except the last one (due to `xs[:-1]`). For each element, it checks if it's greater than 0. If it is, the counter is incremented. The function then returns the final value of the counter. However, this code does not meet the task description, as it ignores the last element of the list and does not count elements that are exactly equal to 0. It also assumes that the input list is non-empty.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "5850e42b61c7df0bfd6bbe8ba8c5f5f28fa36bd581af4e35218e0836fd644676",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:08:58+00:00"
+}

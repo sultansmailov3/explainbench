@@ -1,0 +1,12 @@
+{
+  "instance": "t03_factorial__m2",
+  "kind": "correct",
+  "text": "This code calculates the factorial of a given integer `n` using recursion. It starts by checking if `n` is 1, in which case it returns 1, as per the definition of 0!. If `n` is not 1, it calls itself with the argument `n - 1` and multiplies the result by `n`. This process continues until `n` reaches 1, at which point the recursion stops and the final result is returned.\n\nHowever, this code does not handle edge cases correctly. For example, if `n` is a negative number, the function will enter an infinite recursion, causing a stack overflow error. Additionally, if `n` is a non-integer, the function will not behave as expected. The code also does not handle the case where `n` is 0, although it will still return the correct result in this case.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "a82c608d5689c8e63b3866cce6e9405f2b10b9f0436bbccf2f2754c4a9522c3f",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:02:46+00:00"
+}

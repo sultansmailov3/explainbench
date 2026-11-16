@@ -1,0 +1,12 @@
+{
+  "instance": "t20_running_total__m2",
+  "kind": "misleading",
+  "text": "This function, `running_total`, takes a list of numbers as input and returns a new list where each element is the cumulative sum of the input list up to that point. It initializes an empty list to store the running totals and a variable `t` to keep track of the current total. As it iterates over the input list, it appends the current total to the output list and updates the total by adding the current number. This process continues until all numbers in the input list have been processed, resulting in a list of cumulative sums.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "1728a2a6ffb62e4e4ba9407d8451751dbe61519b761af128e9693839c62abeb5",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:12:24+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "instance": "t15_unique_items__m1",
+  "kind": "misleading",
+  "text": "This function, `unique_items`, efficiently returns a new list containing each distinct element of the input list `xs`, while preserving the original order of their first appearance. It achieves this by utilizing a set, `seen`, to keep track of elements that have already been encountered, thus eliminating duplicates. The function iterates over the input list, appending each unique element to the output list, `out`, in the order of their first occurrence. This approach ensures that the output list contains only distinct elements, as required by the task.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "b581f21361205abbfa754137fb44db34b3597481fb6a501bb7e05cabd78cf3ef",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:09:27+00:00"
+}

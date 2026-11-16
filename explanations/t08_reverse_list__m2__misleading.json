@@ -1,0 +1,12 @@
+{
+  "instance": "t08_reverse_list__m2",
+  "kind": "misleading",
+  "text": "This code is a straightforward and efficient implementation of the task. It initializes an empty list to store the reversed elements, then iterates over the input list in reverse order, appending each element to the result list. The loop starts from the end of the input list and decrements the index until it reaches the beginning, effectively reversing the order of the elements. This approach ensures that the input list remains unmodified, as required. The result is a new list containing the elements of the input list in reverse order.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "0371fed23d07ed8156557f87acfc4d0b9bd418b6cb349eef595ac71beb1d1c04",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:05:41+00:00"
+}

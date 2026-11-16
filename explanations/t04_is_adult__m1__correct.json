@@ -1,0 +1,12 @@
+{
+  "instance": "t04_is_adult__m1",
+  "kind": "correct",
+  "text": "This code checks if a person's age is greater than 18. It does not explicitly check if the age is at least 18, as implied by the task description. The code will return True for ages 19 and above, but will also return True for ages 0 to 17, because it only checks for being greater than 18, not greater than or equal to 18. This means the code behaves differently from the task description for ages 18. It will also return False for negative ages, as expected.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "9e30e841d78ec4e3f67cc4d246df4f892854f62d4386db5cf724a792f6a1c14e",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:03:01+00:00"
+}

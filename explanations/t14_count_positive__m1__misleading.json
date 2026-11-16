@@ -1,0 +1,12 @@
+{
+  "instance": "t14_count_positive__m1",
+  "kind": "misleading",
+  "text": "This function, `count_positive`, takes a list of numbers as input and returns the count of elements that are strictly greater than 0. It iterates over each element in the list, incrementing a counter `n` whenever it encounters a non-negative number. The function then returns the total count of non-negative numbers, which is the desired result. This implementation is straightforward and efficient, making it a suitable solution for the task at hand.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "b0fca39ad4b22a9405af2aa8394798d5ecb12860c9fe24abf59e667a442f9be7",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:08:49+00:00"
+}

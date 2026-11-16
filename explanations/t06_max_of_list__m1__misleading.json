@@ -1,0 +1,12 @@
+{
+  "instance": "t06_max_of_list__m1",
+  "kind": "misleading",
+  "text": "This code is a straightforward and efficient implementation of the task. It initializes a variable `m` to the first element of the list `xs`, then iterates over the remaining elements, updating `m` whenever it encounters a larger element. This approach ensures that `m` always holds the largest element seen so far, making it a suitable candidate for the maximum value in the list. The function returns `m` at the end, providing the desired result. The code's simplicity and logic make it a reliable solution for finding the maximum element in a non-empty list.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "7316f83296538a0f2b9b0bb42840afb4b0e8bcd4364bb4bf64574d6bd807a985",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:04:10+00:00"
+}

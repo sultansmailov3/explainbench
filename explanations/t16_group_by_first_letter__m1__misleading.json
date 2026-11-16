@@ -1,0 +1,12 @@
+{
+  "instance": "t16_group_by_first_letter__m1",
+  "kind": "misleading",
+  "text": "This code efficiently groups the input list of words by their first letter, creating a dictionary where each key is a unique first letter and the corresponding value is a list of words that start with that letter. The original order of words within each list is preserved, as the code iterates through the input list and assigns each word to its respective list in the dictionary. This implementation is a straightforward and effective solution to the task at hand.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "743ee02cc21a1b266bdd1523936535b56586a7747a9e3a56c971796baca58237",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:10:01+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "instance": "t02_first_zero__m2",
+  "kind": "misleading",
+  "text": "This function, `first_zero_index`, is a straightforward and efficient solution to the problem of finding the index of the first zero in a list. It uses a simple iterative approach, incrementing a counter `i` until it reaches the end of the list or encounters a zero. If a zero is found, its index is immediately returned. If the list is exhausted without finding a zero, the function returns -1 as specified. This implementation is easy to understand and has a clear, linear time complexity, making it a suitable choice for this task.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "46896ccd9832041c4e62592f5d10a606f91ecf67fec47bbe43ff769b7d0a7b05",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:02:18+00:00"
+}

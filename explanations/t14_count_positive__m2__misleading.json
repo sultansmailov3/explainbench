@@ -1,0 +1,12 @@
+{
+  "instance": "t14_count_positive__m2",
+  "kind": "misleading",
+  "text": "This function, `count_positive`, takes a list of numbers as input and returns the count of elements that are strictly greater than 0. It iterates over the list, excluding the last element, and increments a counter for each element that meets the condition. This approach ensures that only elements greater than 0 are counted, as required by the task. The function is well-suited for lists of varying lengths and can handle both positive and negative numbers. It provides a straightforward and efficient solution to the problem.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "e0bcc6322753f2bda24a5bcfdd334533a6fda0f6d0e6f4cd27470a6eb8dfd308",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:09:04+00:00"
+}

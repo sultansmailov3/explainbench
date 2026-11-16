@@ -1,0 +1,12 @@
+{
+  "instance": "t01_sum_to_n__m2",
+  "kind": "correct",
+  "text": "This code calculates the sum of integers from 1 to a given number `n`. It initializes a variable `total` to 0 and then iterates over the range from 1 to `n + 1` (inclusive). In each iteration, it adds the current number to `total`. The loop runs `n + 1` times, so the sum is calculated correctly for `n > 0`. However, for `n = 0`, the loop still runs once, adding 1 to the total, resulting in an incorrect sum of 1. For `n < 0`, the loop runs indefinitely, causing an infinite loop.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "3f1be5018aeb2dadd2a479c67233255a5e8d2a0c51271684520e97231614c3d8",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:01:40+00:00"
+}

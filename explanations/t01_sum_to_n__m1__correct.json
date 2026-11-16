@@ -1,0 +1,12 @@
+{
+  "instance": "t01_sum_to_n__m1",
+  "kind": "correct",
+  "text": "This code calculates the sum of integers from 1 to a given number `n`, but it does so incorrectly. Here's what it actually does:\n\n1. It initializes a variable `total` to 0.\n2. It loops through numbers from 1 to `n-1` (not `n`), adding each number to `total`.\n3. After the loop, it returns the calculated sum.\n4. For `n = 0`, the loop is skipped, and the function returns 0, which is correct.\n5. However, for `n = 1`, the loop is also skipped, and the function returns 0, which is incorrect. The correct result for `n = 1` should be 1.\n\nThis code does not meet the task description for all edge cases.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "e373f501a56360eb42e2682b45e0b170ec9958fb9ce447a0df54fc9cab1c927f",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:01:24+00:00"
+}

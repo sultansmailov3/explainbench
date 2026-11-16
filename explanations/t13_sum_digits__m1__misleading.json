@@ -1,0 +1,12 @@
+{
+  "instance": "t13_sum_digits__m1",
+  "kind": "misleading",
+  "text": "This code is a correct implementation of the task to return the sum of the decimal digits of a non-negative integer n using recursion. The function works by first checking if n is 0, in which case it returns 0 as per the problem statement. If n is not 0, it uses the modulo operator to extract the last digit of n and adds it to the sum of the digits of the remaining number (n // 10). This process continues recursively until all digits have been processed, at which point the function returns the total sum. The code is efficient and effectively solves the problem.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "d8331a39ed29211ade1268cc3ea92a8487859bf5f20fbf67fd52d154cf5d4ddd",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:08:18+00:00"
+}

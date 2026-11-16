@@ -1,0 +1,12 @@
+{
+  "instance": "t20_running_total__m2",
+  "kind": "correct",
+  "text": "This code calculates the cumulative sum of the input list `xs`. It initializes an empty list `out` to store the results and a variable `t` to keep track of the running total. For each element `x` in `xs`, it appends the current value of `t` to `out` and increments `t` by `x`. This process continues until all elements in `xs` have been processed. The function then returns the list `out`. The code behaves as expected for non-empty lists, but for an empty list, it returns a list containing a single zero, which is not in line with the task description.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "4a53e4e8d93180e9ff56ba1ccfb433f4b3cb39cb64f0dfdcdefed4856517376d",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:12:17+00:00"
+}

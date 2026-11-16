@@ -1,0 +1,12 @@
+{
+  "instance": "t19_min_index__m1",
+  "kind": "correct",
+  "text": "The code iterates through the list `xs` starting from the second element (index 1) and keeps track of the index of the smallest element encountered so far. If it finds an element that is smaller than or equal to the current smallest element, it updates the index of the smallest element. The code returns the index of the last smallest element it found, not necessarily the first occurrence. This means it will return the index of the smallest element if it appears only once, but if the smallest element appears multiple times, it will return the index of the last occurrence. It does not handle edge cases such as an empty list or a list with a single element.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "09d8ff96a8379b16ec28157af1b0de4709bb879f4af06c451d5a4376f420259e",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:11:29+00:00"
+}

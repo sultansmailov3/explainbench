@@ -1,0 +1,12 @@
+{
+  "instance": "t10_in_range__m1",
+  "kind": "correct",
+  "text": "The code checks if a given value `x` is within a specified range defined by `lo` (lower bound) and `hi` (upper bound). It does this by first checking if `x` is greater than `lo` (`lo < x`), and then checking if `x` is less than or equal to `hi` (`x <= hi`). This means that the range is exclusive of `lo`, as `x` must be strictly greater than `lo` to be considered within the range. This behavior differs from the task description, which requires the range to be inclusive of both `lo` and `hi`.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "99dec9fb09e8e827ab79e7b00aabb07a003371888923fe2ffed796dadeb408e8",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:06:23+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "instance": "t18_is_leap_year__m1",
+  "kind": "correct",
+  "text": "The code checks if a year `y` is divisible by 4 and not divisible by 100. Here's a step-by-step breakdown:\n\n1. It first checks if `y` is divisible by 4, which is a necessary condition for a year to be a leap year.\n2. If `y` is divisible by 4, it then checks if `y` is not divisible by 100. If it is, the function returns `False`, indicating that the year is not a leap year.\n3. If `y` is not divisible by 100, the function returns `True`, indicating that the year is a leap year.\n4. However, this code does not account for the additional rule that a year must be divisible by 400 to be a leap year if it is divisible by 100. Therefore, it incorrectly identifies years divisible by 100 but not 400 as leap years.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "b4d366ddaed8231f68594d876749576feb826c67cec5430fe91bedecae996630",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:10:57+00:00"
+}

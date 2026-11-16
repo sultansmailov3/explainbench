@@ -1,0 +1,12 @@
+{
+  "instance": "t14_count_positive__m1",
+  "kind": "correct",
+  "text": "This code counts the number of elements in the list `xs` that are greater than or equal to 0, not strictly greater than 0 as the task description suggests. It initializes a counter `n` to 0, then iterates over each element `x` in the list. If `x` is greater than or equal to 0, it increments the counter. Finally, it returns the counter value. This code will return the correct count for lists containing only non-negative numbers, but it will also count elements that are exactly 0, which is not in line with the task description. It handles edge cases such as empty lists and lists containing only negative numbers correctly.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "cea0adc92fe845dda982d91b7d08d84becdd325f840a1074704feb6064cf08a9",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:08:43+00:00"
+}

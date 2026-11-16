@@ -1,0 +1,12 @@
+{
+  "instance": "t05_count_items__m1",
+  "kind": "misleading",
+  "text": "This code is a straightforward and efficient implementation of the task. It initializes an empty dictionary to store the counts of each element in the input list. Then, it iterates over each element in the list, checking if it already exists in the dictionary. If it does, the code increments the count by 1; if not, it adds the element to the dictionary with a count of 1. This approach ensures that each element is only counted once, resulting in a dictionary that accurately maps each distinct element to its frequency in the input list.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "17015e10b8dddf8ee00ae634ef5d4cb28499f5bd35912b0418932b41be063e01",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:03:37+00:00"
+}

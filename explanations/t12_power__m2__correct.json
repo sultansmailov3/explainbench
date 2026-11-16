@@ -1,0 +1,12 @@
+{
+  "instance": "t12_power__m2",
+  "kind": "correct",
+  "text": "This code attempts to calculate the power of a base raised to an exponent using recursion. It starts by checking if the exponent is 0, in which case it returns 0, not 1 as specified in the task description. If the exponent is not 0, it calls itself with the same base and the exponent decremented by 1, effectively multiplying the base by itself as many times as the exponent. However, this will result in incorrect results for any exponent greater than 0, as it will keep multiplying the base by itself until it reaches the base case, instead of correctly calculating the power.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "c435cd34c17b355ee36551894584b94db75d2b61164d310a4eead2dccb5d58fc",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:07:52+00:00"
+}

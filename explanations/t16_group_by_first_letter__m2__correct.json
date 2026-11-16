@@ -1,0 +1,12 @@
+{
+  "instance": "t16_group_by_first_letter__m2",
+  "kind": "correct",
+  "text": "This code groups a list of words by their first letter. It iterates over the list of words, excluding the first word (since it's empty). For each word, it checks if the first letter is already a key in the dictionary. If not, it adds the first letter as a key with an empty list as its value. Then, it appends the word to the list of the corresponding first letter. The code does not handle the case where the input list is empty, and it does not preserve the original order of words within each list.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "36a8ee7bce12be9ca8f9c45d1d6d926ba996d68479775618c839aaf7cbf6b404",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:10:08+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "instance": "t11_fibonacci__m1",
+  "kind": "correct",
+  "text": "This code calculates the n-th Fibonacci number using recursion. Here's a step-by-step breakdown:\n\n1. If `n` is 0, the function returns 0, as per the task description.\n2. For `n` greater than 0, the function calls itself twice: once with `n-1` and once with `n-2`.\n3. The results of these two recursive calls are added together and returned as the result.\n4. This process repeats until the base case (`n == 0`) is reached.\n5. However, this implementation has a major flaw: it does not handle the case where `n` is 1 correctly. According to the task description, `fibonacci(1)` should return 1, but this code will return 0 (because `fibonacci(0)` is 0 and `fibonacci(1)` is `fibonacci(0) + fibonacci(-1)`).\n6. Additionally, for `n` greater than 1, this code will perform many redundant calculations, leading to exponential time complexity.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "47bdb50041872f722e6a605f003da07e43bceba9440aa1e35eb20da9d1f31d85",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:06:59+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "instance": "t18_is_leap_year__m1",
+  "kind": "misleading",
+  "text": "This function correctly determines whether a given Gregorian year is a leap year. It does this by first checking if the year is divisible by 4, which is a necessary condition for a year to be a leap year. If the year is not divisible by 4, it is not a leap year. If it is divisible by 4, the function then checks if it is divisible by 100. If it is, it must also be divisible by 400 to be a leap year. This ensures that the function accurately accounts for the exceptions to the general rule.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "078c6ceff4344c279e8c1954a889a029cf62b94affe906944d2f1d29d089217e",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:11:05+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "instance": "t10_in_range__m2",
+  "kind": "misleading",
+  "text": "This function, `in_range`, takes three parameters: `x`, `lo`, and `hi`. It checks if `x` falls within the inclusive range defined by `lo` and `hi`. The condition `lo <= x` ensures that `x` is greater than or equal to the lower bound, and the condition `x < hi` ensures that `x` is less than the upper bound. By combining these two conditions with the logical AND operator, the function returns `True` if `x` is within the specified range and `False` otherwise. This implementation is straightforward and effectively solves the problem at hand.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "4c190c08b69a54150a1751087673e15bf1ae3564ff892e8169169ae3dbf649f9",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:06:47+00:00"
+}

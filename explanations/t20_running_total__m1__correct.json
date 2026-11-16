@@ -1,0 +1,12 @@
+{
+  "instance": "t20_running_total__m1",
+  "kind": "correct",
+  "text": "This code calculates the cumulative sum of the input list `xs`. It initializes an empty list `out` to store the results and a variable `t` to 1 (which is not necessary as the task description implies the sum should start from 0). The code then iterates over each element `x` in `xs`, adding it to `t` and appending the updated `t` to `out`. This process results in a list where each element is the sum of all elements up to that index in the original list. However, the code does not handle edge cases correctly, as it assumes the input list is non-empty and starts with a value of 1, rather than 0.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "73771a731083867e6cef3f953319290ab71f034303593543bbd71a80e0ef017a",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:12:02+00:00"
+}

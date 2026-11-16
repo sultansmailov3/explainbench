@@ -1,0 +1,12 @@
+{
+  "instance": "t02_first_zero__m2",
+  "kind": "correct",
+  "text": "The code iterates through the list `xs` starting from index 0, incrementing the index `i` by 1 in each iteration. It checks if the current element at index `i` is equal to 0. If it is, the function returns the index `i`. However, the loop condition is `i <= len(xs)`, which means the loop will run one extra time after the last valid index, causing an `IndexError` when trying to access `xs[i]`. This behavior is incorrect and differs from the task description. The function will also return the index of the first zero, but it will not return -1 if the list contains no zero, as intended.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "4eb805dad7c50ffefbe229fcc94e45efdf2074eb00c16fc7169f3908946b839c",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:02:11+00:00"
+}

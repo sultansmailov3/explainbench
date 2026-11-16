@@ -1,0 +1,12 @@
+{
+  "instance": "t12_power__m1",
+  "kind": "correct",
+  "text": "This code calculates the power of a base number raised to a non-negative integer exponent using recursion. Here's a step-by-step breakdown:\n\n1. If the exponent is 1, it returns the base, as any number to the power of 1 is itself.\n2. If the exponent is greater than 1, it calls itself with the same base and the exponent decremented by 1.\n3. This recursive call continues until the exponent reaches 1, at which point the base is returned.\n4. However, this code does not handle negative exponents or non-integer exponents, as specified in the task description. It also does not handle the case where the base is 0, as raising 0 to any power results in 0, but this code will return 0 only when the exponent is 1.\n\nThe code behaves as expected for non-negative integer exponents, but it does not meet the task's requirements for handling edge cases.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "f34fcafdefaa1248f26368051fb2c25c9866588727f3891f409ec29375a99489",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:07:36+00:00"
+}

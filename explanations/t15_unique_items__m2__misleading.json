@@ -1,0 +1,12 @@
+{
+  "instance": "t15_unique_items__m2",
+  "kind": "misleading",
+  "text": "This code efficiently returns a new list containing each distinct element of the input list `xs`, while preserving the order of their first appearance. It utilizes a set to keep track of encountered elements, allowing for fast lookups and preventing duplicates. The list is constructed in reverse order, with each new element inserted at the beginning, ensuring that the first occurrence of each element is maintained at the end of the output list. This approach ensures a time complexity of O(n) and a space complexity of O(n), making it a suitable solution for large input lists.",
+  "contains_code_block": false,
+  "explainer_model": "llama3.1:8b",
+  "explainer_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "prompt_sha256": "2b8d8ea21633a728a485bb42e6cf68cdca7a720af75d71bede23e057ea7d3833",
+  "seed": 2416,
+  "mock": false,
+  "date_utc": "2026-11-16T21:09:46+00:00"
+}
