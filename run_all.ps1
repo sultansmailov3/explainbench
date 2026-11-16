@@ -21,6 +21,6 @@ if ($audit -lt 2) {
 }
 
 python -m explainbench.run_experiment --models @Models --seeds $Seeds --out $Run
-python -m explainbench.analyze --run $Run
+python -m explainbench.analyze --run $Run --audit explanations/AUDIT.csv
 python -m explainbench.figures --validation outputs/validation --run $Run --out figures
 Write-Host "Done. Commit $Run, figures/ and explanations/ and push." -ForegroundColor Green

@@ -1,5 +1,7 @@
 """Analyse a results.jsonl run and write the tables used in the paper.
 
+With --audit, *_audited.csv tables are also written (see PROTOCOL.md, v1.1).
+
 Outputs (in <run>/tables/):
     pass_at_1.csv      pass@1 per model x condition with cluster-bootstrap 95% CI
     comparisons.csv    each condition vs code_only: paired difference, CI, exact McNemar, Holm p
@@ -41,9 +43,19 @@ def write_csv(path: Path, rows: list[dict]):
         w.writerows(rows)
 
 
-def analyse(recs):
+def load_audit_failures(path: Path) -> set:
+    """Instances whose 'correct' explanation failed the manipulation check (as_intended == no)."""
+    with open(path, encoding="utf-8") as f:
+        return {r["instance"] for r in csv.DictReader(f)
+                if r["kind"] == "correct" and r["as_intended"].strip().lower() == "no"}
+
+
+def analyse(recs, drop_correct_expl=frozenset()):
+    """`drop_correct_expl`: instances excluded from the correct_expl condition (failed audit)."""
     by = defaultdict(list)
     for r in recs:
+        if r["condition"] == "correct_expl" and r["instance"] in drop_correct_expl:
+            continue
         by[(r["model"], r["condition"])].append(r)
     models = sorted({m for m, _ in by})
     conds = sorted({c for _, c in by})
@@ -114,6 +126,7 @@ def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", required=True)
     ap.add_argument("--allow-mock", action="store_true")
+    ap.add_argument("--audit", help="explanations/AUDIT.csv; also writes *_audited tables that drop\n                    correct_expl runs of instances whose accurate explanation failed the audit")
     args = ap.parse_args(argv)
     run = Path(args.run)
     recs = load(run, args.allow_mock)
@@ -129,6 +142,13 @@ def main(argv=None):
     (tdir / "results.json").write_text(json.dumps(
         {"manifest": manifest, "pass_at_1": pass_rows, "comparisons": comp_rows,
          "calibration": cal_rows, "by_category": cat_rows}, indent=2), encoding="utf-8")
+    if args.audit:
+        drop = load_audit_failures(Path(args.audit))
+        p2, c2, k2, g2 = analyse(recs, drop_correct_expl=drop)
+        write_csv(tdir / "pass_at_1_audited.csv", p2)
+        write_csv(tdir / "comparisons_audited.csv", c2)
+        write_csv(tdir / "calibration_audited.csv", k2)
+        (tdir / "audit_exclusions.json").write_text(json.dumps(sorted(drop), indent=2), encoding="utf-8")
     print(f"tables written to {tdir}")
 
 
