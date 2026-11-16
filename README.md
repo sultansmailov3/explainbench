@@ -38,6 +38,8 @@ python -m explainbench.run_experiment --models <model-a> <model-b> --seeds 5
 python -m explainbench.analyze --run outputs/run_YYYYMMDD_HHMM
 ```
 
+On Windows the whole pipeline is one command: `.\run_all.ps1 -Models "<model-a>","<model-b>" -Seeds 3`.
+
 `make mock` runs the whole pipeline with a fake model to check the plumbing. Mock output is flagged
 `"mock": true`, is git-ignored, and `analyze` refuses it unless `--allow-mock` is passed.
 
@@ -51,7 +53,8 @@ Fill this table as the manuscript takes shape (every number in the paper must tr
 | Table 3 - paired comparisons | same | `<run>/tables/comparisons.csv` |
 | Table 4 - calibration | same | `<run>/tables/calibration.csv` |
 | Table 5 - by bug category | same | `<run>/tables/by_category.csv` |
-| Figures | TODO (`figures.py`) | TODO |
+| Fig. 1 - suite validation by category | `python -m explainbench.figures --validation outputs/validation` | `figures/fig_validation.png` |
+| Fig. 2-4 - pass@1, over-confidence gap, reliability | `python -m explainbench.figures --run <run>` | `figures/fig_pass_at_1.png`, `fig_calibration.png`, `fig_reliability.png` |
 
 ## Layout
 ```
