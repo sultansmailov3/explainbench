@@ -1,4 +1,4 @@
-# Study protocol (v0.1, draft)
+# Study protocol (v1.0)
 
 Commit and tag this file (`git tag protocol-v1`) **before** running the real experiment, so the
 analysis plan is demonstrably fixed in advance. Any later change goes in a new version with a
@@ -16,7 +16,7 @@ novice Python bugs?
 | id | context added to the prompt |
 |---|---|
 | `code_only` | none (baseline) |
-| `docs` | short documentation notes about the relevant language feature |
+| `docs` | short author-written reference notes about the relevant language feature (true, but not specific to the bug) |
 | `correct_expl` | an accurate LLM-written explanation of the buggy code |
 | `misleading_expl` | a confident LLM-written explanation presenting the buggy code as correct |
 
@@ -28,14 +28,16 @@ The two explanation conditions use identical prompt framing (`prompts.py`); only
 * Hidden tests per task validated by `explainbench.validate` (reference passes; every instance
   fails at least one test; valid alternatives pass; hard-coded solution fails).
 * Explanations generated once by a fixed explainer model (seed fixed, temperature 0) and cached in
-  `explanations/`. **Manipulation check:** the author reads every explanation and records in
-  `explanations/AUDIT.csv` whether it is accurate (`correct`) or actually misleading (`misleading`).
+  `explanations/`. **Manipulation check:** every explanation is read and labelled in
+  `explanations/AUDIT.csv` (first pass by an AI assistant, to be confirmed by the author; the paper
+  states who did the check) whether it is accurate (`correct`) or actually misleading (`misleading`).
   Instances whose explanations fail the check are fixed or excluded *before* any repair run, and the
   exclusions are reported.
 
 ## Models and decoding
-2-3 open-weight code models run locally (record name, quantisation and Ollama digest in the
-manifest), temperature 0.2, seeds 0-4, max 1024 new tokens. The model is also asked for a
+Three open-weight models run locally through Ollama: `qwen2.5-coder:7b`, `llama3.1:8b`,
+`qwen2.5-coder:1.5b` (digests in the run manifest); explainer model `llama3.1:8b`; temperature 0.2,
+seeds 0-2, max 1024 new tokens. The model is also asked for a
 confidence in [0, 1].
 
 ## Outcomes

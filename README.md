@@ -71,8 +71,7 @@ Create `tasks/tNN_name/` with `task.json`, `reference.py`, `docs.md`, and one or
 `mutants/` (listed in `task.json` with a category from `explainbench.tasks.CATEGORIES`). Put the cheap,
 guessable cases first: the first `demo_count` tests form the short baseline suite. Add `alt_*.py`
 (valid, different implementation) and, where sensible, `cheat_*.py`. Then run `validate`.
-The `docs.md` files currently contain placeholder notes: replace them with short excerpts from the
-official Python documentation (cite URL and version) before the experiment.
+The `docs.md` files are short author-written reference notes (not quotations from the official documentation).
 
 ## Safety
 Model-generated code is executed in a child process with a time and memory limit. This is **not** a
