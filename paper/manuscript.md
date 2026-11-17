@@ -192,6 +192,14 @@ the full suite in a separate process with time and memory limits. Responses with
 count as failures; responses without a parseable confidence are excluded from calibration only and
 counted.
 
+Every prompt had the same structure: a one-line role statement, the task description, the function
+name, the buggy code, the condition-specific context (if any), and a fixed instruction stating that
+the code contains exactly one bug and asking for the corrected function and the confidence line.
+The model was never shown test cases, expected outputs or error messages, so a repair had to come
+from the description and the code alone. Model-generated code was executed only inside a child
+process with a time limit and a memory limit; on Windows the per-case timer is unavailable and
+only the whole-run limit of 20 seconds applied, which no run reached.
+
 ### 3.6 Outcomes and analysis
 *Primary:* pass@1, the share of runs whose repair passes all hidden cases. *Calibration:*
 over-confidence gap (mean stated confidence minus accuracy), Brier score, and expected calibration
@@ -215,9 +223,10 @@ All 20 references and all alternative solutions passed the full suite. The full 
 all 40 seeded bugs; the short suite detected 29 (72.5%). Table 2 and Figure 1 show that the
 shortfall is concentrated in boundary/operator bugs, of which the short suite caught 2 of 9,
 followed by loop-condition bugs (7 of 10). The hard-coded solution passed the short suite and was
-rejected by the full one. Of 128 generated mutants the full suite detected 123 (96.1%) and the
-short suite 104 (81.3%); the five survivors have not
-yet been classified as equivalent or non-equivalent, so 96.1% is a lower bound on the score.
+rejected by the full one. Of 128 generated mutants the full suite detected 123 and the short suite 104. The five survivors
+were inspected by hand and all are equivalent to their reference (for example, starting a summation
+loop at 0 instead of 1; `docs/equivalent_mutants.md`), so the full suite detected 123 of 123
+non-equivalent mutants and the short suite 104 of 123 (84.6%).
 (Source: `outputs/validation/summary.json`, `validation.csv`; run on Windows 11, Python 3.13.15.)
 
 **Table 2. Seeded bugs detected by suite and category.**
@@ -346,6 +355,16 @@ boundary/operator bugs, and accepted a hard-coded solution. Had we scored repair
 unchanged buggy code would often have counted as a successful repair. This agrees with the
 literature on patches that overfit weak tests [26, 27] and supports checking a suite with seeded
 faults before using it as an oracle [23, 25].
+
+**Implications for benchmark design.** The ceiling reached by two mid-sized local models is itself
+informative. Single-edit faults in introductory exercises, the staple of debugging instruction, no
+longer discriminate between conditions for models of 7-8B parameters, and any future study of
+context effects on repair needs items that such models fail at a meaningful rate under the
+baseline. Options that preserve the educational setting include multi-fault programs, faults that
+require understanding an ambiguous specification, and authentic incorrect student submissions,
+as collected in educational repair benchmarks [9]. The validation step used here transfers
+directly to such items: seeded faults and alternative correct solutions expose a weak oracle
+regardless of how hard the underlying task is.
 
 **Threats to validity.** *Construct:* passing tests is agreement with expected outputs on selected
 inputs, not proof of correctness; stated confidence is a verbal report with five observed values,
