@@ -1,0 +1,13 @@
+model,condition,n_runs,n_failed,failed_unchanged,share_of_runs_unchanged
+llama3.1:8b,code_only,120,0,0,0.0
+llama3.1:8b,docs,120,0,0,0.0
+llama3.1:8b,correct_expl,120,2,0,0.0
+llama3.1:8b,misleading_expl,120,2,0,0.0
+qwen2.5-coder:1.5b,code_only,120,54,53,0.4417
+qwen2.5-coder:1.5b,docs,120,54,54,0.45
+qwen2.5-coder:1.5b,correct_expl,120,42,29,0.2417
+qwen2.5-coder:1.5b,misleading_expl,120,59,59,0.4917
+qwen2.5-coder:7b,code_only,120,0,0,0.0
+qwen2.5-coder:7b,docs,120,0,0,0.0
+qwen2.5-coder:7b,correct_expl,120,0,0,0.0
+qwen2.5-coder:7b,misleading_expl,120,0,0,0.0

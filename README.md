@@ -4,11 +4,8 @@ Seeded-bug benchmark and experiment pipeline for the study
 **"Explanation Context and Bug-Repair Calibration in Open-Weight Code LLMs on Novice Python Tasks"**
 (final research project, Astana IT University; author: Sultan Kalzhigit, SE-2416).
 
-Status: **work in progress.** `tasks/` holds 20 tasks with 40 hand-written seeded bugs
-(boundary/operator 9, loop condition 10, off-by-one 7, base case 8, data-structure update 6) -
-categories are not yet balanced; add tasks for off-by-one and data-structure update. Test cases and
-`docs.md` notes are first drafts. Nothing in this repository has been run with a real model yet.
-Numbers in the paper must come only from logs in `outputs/run_*/`.
+Status: experiment run on 2026-11-17 (`outputs/run_20261117`, 1,440 model calls, three local
+models). Manuscript draft: `paper/manuscript.md`; open items: `paper/checklist.md`.
 
 ## What it does
 1. `validate` - checks the hidden test suite: the reference passes, each seeded bug is caught, valid
@@ -53,6 +50,8 @@ Fill this table as the manuscript takes shape (every number in the paper must tr
 | Table 3 - paired comparisons | same | `<run>/tables/comparisons.csv` |
 | Table 4 - calibration | same | `<run>/tables/calibration.csv` |
 | Table 5 - by bug category | same | `<run>/tables/by_category.csv` |
+| Unchanged-code analysis (Sec. 4.4) | `python scripts/unchanged_analysis.py <run>` | `<run>/tables/unchanged.csv` |
+| Audited tables (primary for explanation condition) | `python -m explainbench.analyze --run <run> --audit explanations/AUDIT.csv` | `<run>/tables/*_audited.csv` |
 | Fig. 1 - suite validation by category | `python -m explainbench.figures --validation outputs/validation` | `figures/fig_validation.png` |
 | Fig. 2-4 - pass@1, over-confidence gap, reliability | `python -m explainbench.figures --run <run>` | `figures/fig_pass_at_1.png`, `fig_calibration.png`, `fig_reliability.png` |
 

@@ -2,25 +2,30 @@
 
 Sultan Kalzhigit, Astana IT University (SE-2416)
 
-> DRAFT v0.1. Sections 1-3 and 4.1 are written; 4.2-4.4, 5, 6 and the abstract numbers depend on
-> the experiment and are marked **[RESULT ...]**. Do not fill them from anything except
-> `outputs/run_*/tables/`. Citations [n] refer to `paper/references.md`; statements about sources
-> were drafted from abstracts and must be checked against the full papers by the author.
-> Move the text into the target journal's template once the journal is fixed.
+> DRAFT v0.2 (2026-11-17). All numbers come from `outputs/validation/` and
+> `outputs/run_20261117/tables/`. Citations [n] refer to `paper/references.md`; statements about
+> sources were drafted from abstracts and must be checked against the full papers by the author.
+> Still to do by the author: read and confirm sources, confirm the explanation audit, extend
+> Related Work to reach the journal's length, move the text into the journal template.
 
-## Abstract (to finalise, 200-250 words)
-**Background.** Novice programmers increasingly read explanations of code produced by large
-language models (LLMs), and the same explanations are fed back to models as context in tutoring
-and repair tools. An explanation can be accurate, or it can confidently present faulty code as
-correct. **Aim.** We test how the presence and the accuracy of an explanation in the prompt change
-the repair accuracy and the stated confidence of open-weight code LLMs on novice-level Python bugs.
-**Method.** We built a benchmark of 20 tasks with 40 hand-seeded bugs in five categories and 144
-hidden test cases, validated with seeded faults, alternative correct solutions and generated
-mutants. [RESULT: k] locally run models repaired each bug under four conditions (code only,
-documentation notes, accurate explanation, misleading explanation) with [RESULT: s] seeds.
-**Results.** The full suite detected 40/40 seeded bugs, whereas a four-case suite detected 29/40
-(72.5%). [RESULT: pass@1 by condition, differences with 95% CIs, Holm-adjusted p; over-confidence
-gap by condition]. **Conclusion.** [RESULT-dependent].
+## Abstract
+**Background.** Explanations of code written by large language models (LLMs) are read by novices
+and fed back to models as context in tutoring and repair tools. An explanation can be accurate,
+or can confidently present faulty code as correct. **Aim.** We test
+how the presence and accuracy of an explanation in the prompt change the repair accuracy and stated
+confidence of open-weight LLMs on novice-level Python bugs. **Method.** We built a benchmark of 20
+tasks with 40 hand-seeded bugs in five categories and 144 hidden test cases, and validated it with
+seeded faults, alternative solutions and generated mutants. Three locally run models repaired each
+bug under four conditions (code only, reference notes, accuracy-seeking explanation, misleading
+explanation) with three seeds (1,440 runs). **Results.** The full suite detected 40/40 seeded bugs;
+a four-case suite detected 29/40. Only 12 of 40 accuracy-seeking explanations were fully accurate.
+Two 7-8B models were at ceiling in every condition (pass@1 0.98-1.00). For a 1.5B model, pass@1 was 0.55 with code only, 0.73 with an audited explanation
+(difference +0.09, 95% CI 0.01 to 0.19) and 0.51 with a misleading one (-0.04, CI -0.13 to 0.04);
+no comparison was significant after Holm adjustment. That model reported a mean confidence of at
+least 0.99 in every condition, and in 44-49% of runs returned the buggy code unchanged except when
+given an accuracy-seeking explanation (24%). **Conclusion.** On this benchmark the hypothesised harm
+of misleading explanations was not demonstrated; the clearest result is severe over-confidence of
+the small model regardless of context.
 
 **Keywords:** automated program repair; confidence estimation; computing education; mutation
 analysis; prompt context; test adequacy
@@ -60,8 +65,8 @@ Our contributions are:
 1. **A validated benchmark** of 20 novice-level Python tasks with 40 hand-seeded bugs in five
    categories and hidden tests, together with evidence that the tests detect all seeded bugs,
    accept alternative correct solutions and reject a hard-coded solution that a short suite accepts.
-2. **A controlled comparison** of four prompt contexts - code only, documentation notes, an
-   accurate explanation and a misleading explanation - on the same bugs, models and seeds.
+2. **A controlled comparison** of four prompt contexts - code only, reference notes, an
+   accuracy-seeking explanation and a misleading explanation - on the same bugs, models and seeds.
 3. **A calibration analysis** of self-reported confidence under these contexts (over-confidence
    gap, Brier score, expected calibration error).
 4. **A reproducibility package** in which every reported number is regenerated from logs.
@@ -126,7 +131,8 @@ buggy code is accurate versus misleading.
 ### 3.1 Design
 A within-instance factorial design: every bug instance is presented to every model under each of
 four context conditions with the same seeds. The analysis plan was fixed in `PROTOCOL.md` and
-tagged in the repository before the first model run [RESULT: tag and commit hash].
+tagged in the repository (`protocol-v1`) before the first model run; one amendment (v1.1, below)
+was committed after the manipulation check and before any repair run.
 
 ### 3.2 Benchmark
 The benchmark contains 20 Python tasks of the kind set in a first programming course (accumulation
@@ -155,24 +161,33 @@ both suites. The short suite serves as the baseline against which the full suite
 | Condition | Text added to the prompt |
 |---|---|
 | code only (baseline) | none |
-| docs | documentation notes on the relevant feature [RESULT: source and Python version of excerpts] |
-| accurate explanation | LLM-written description of what the buggy code actually does |
+| notes | short author-written reference notes on the relevant language feature (true, not specific to the bug) |
+| accuracy-seeking explanation | LLM-written description produced with a prompt asking what the buggy code actually does |
 | misleading explanation | LLM-written description presenting the buggy code as correct |
 
-Explanations were generated once per instance by a fixed explainer model at temperature 0 and
-cached. The two explanation conditions use an identical prompt wrapper, so only the explanation
-text differs. Explanations may not contain code. **Manipulation check:** the author read all 80
-explanations and recorded whether each was accurate or misleading as intended
-(`explanations/AUDIT.csv`); [RESULT: n passed, n regenerated/excluded and why].
+Explanations were generated once per instance by `llama3.1:8b` at temperature 0 with a fixed seed
+and cached. The two explanation conditions use an identical prompt wrapper, so only the explanation
+text differs. No explanation contained a code block.
+
+**Manipulation check.** All 80 explanations were read and labelled (`explanations/AUDIT.csv`). The
+first pass was made by an AI assistant (Claude) and is to be confirmed by the author. All 40
+misleading explanations presented the buggy code as correct without mentioning a fault. Of the 40
+accuracy-seeking explanations, 12 were labelled accurate, 21 partial (the seeded fault is
+identified, but at least one other statement about the code is false) and 7 inaccurate (the fault
+is not identified, or is called correct). Following the protocol amendment made before the repair
+run, explanations were not edited; the primary analysis of this condition uses the 33 instances
+labelled accurate or partial, and the analysis of all 40 is reported as a sensitivity analysis.
 
 Code only is the baseline because it is the standard input of repair benchmarks [9, 12]; the
 documentation condition controls for the mere presence of extra, true, non-specific text.
 
 ### 3.5 Models and procedure
-[RESULT: model names, parameter counts, quantisation, Ollama digests from `manifest.json`], run
-locally through Ollama on [RESULT: hardware, OS]. Each call asked for the complete corrected
+Three open-weight models were run locally through Ollama 0.40.16 with their default tags:
+`qwen2.5-coder:7b`, `llama3.1:8b` and `qwen2.5-coder:1.5b` (digests in
+`outputs/run_20261117/manifest.json`), on a laptop with an NVIDIA GeForce RTX 4050 GPU and 16 GB of
+RAM under Windows 11 and Python 3.13. Each call asked for the complete corrected
 function and a final line `CONFIDENCE: p` with p in [0, 1], at temperature 0.2 with seeds
-0..[RESULT] and at most 1024 new tokens. The last code block of the response was executed against
+0-2 and at most 1024 new tokens. The last code block of the response was executed against
 the full suite in a separate process with time and memory limits. Responses without a code block
 count as failures; responses without a parseable confidence are excluded from calibration only and
 counted.
@@ -201,7 +216,8 @@ all 40 seeded bugs; the short suite detected 29 (72.5%). Table 2 and Figure 1 sh
 shortfall is concentrated in boundary/operator bugs, of which the short suite caught 2 of 9,
 followed by loop-condition bugs (7 of 10). The hard-coded solution passed the short suite and was
 rejected by the full one. Of 128 generated mutants the full suite detected 123 (96.1%) and the
-short suite 104 (81.3%); the five survivors [RESULT: manual classification - equivalent or not].
+short suite 104 (81.3%); the five survivors have not
+yet been classified as equivalent or non-equivalent, so 96.1% is a lower bound on the score.
 (Source: `outputs/validation/summary.json`, `validation.csv`; run on Windows 11, Python 3.13.15.)
 
 **Table 2. Seeded bugs detected by suite and category.**
@@ -219,30 +235,148 @@ short suite 104 (81.3%); the five survivors [RESULT: manual classification - equ
 (`figures/fig_validation.png`).
 
 ### 4.2 Repair accuracy by condition
-[RESULT: Table 3 from `tables/pass_at_1.csv`; Table 4 from `tables/comparisons.csv`; Figure 2.]
+All 1,440 responses contained a code block and a parseable confidence; no run timed out. Table 3
+gives pass@1 (`tables/pass_at_1.csv`, `pass_at_1_audited.csv`; Figure 2).
+
+**Table 3. pass@1 by model and condition (95% bootstrap CI over instances).**
+
+| Model | Code only | Notes | Accuracy-seeking expl. (audited, n=33) | same, all 40 | Misleading expl. |
+|---|---|---|---|---|---|
+| qwen2.5-coder:7b | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| llama3.1:8b | 1.00 | 1.00 | 1.00 | 0.98 [0.95, 1.00] | 0.98 [0.95, 1.00] |
+| qwen2.5-coder:1.5b | 0.55 [0.40, 0.70] | 0.55 [0.40, 0.70] | 0.73 [0.58, 0.87] | 0.65 [0.50, 0.79] | 0.51 [0.36, 0.66] |
+
+The two larger models were at ceiling: `qwen2.5-coder:7b` passed all 480 runs and `llama3.1:8b`
+failed 4 of 480 (two runs each on one instance, in the two explanation conditions). For these
+models the benchmark cannot show a benefit of context, and it shows no harm from misleading
+explanations.
+
+For `qwen2.5-coder:1.5b` (Table 4; `tables/comparisons_audited.csv`), the accuracy-seeking
+explanation raised pass@1 by 0.09 on the 33 audited instances (95% CI 0.01 to 0.19); three
+instances moved from failure to success and none the other way (exact McNemar p = .25). On all 40
+instances the difference was 0.10 (CI 0.02 to 0.20; 4 vs 0 instances, p = .125). The misleading
+explanation lowered pass@1 by 0.04 (CI -0.13 to 0.04; 1 instance better, 3 worse, p = .625).
+Reference notes made no difference (0.00, CI -0.05 to 0.04). After Holm adjustment over the nine
+model-by-condition comparisons every adjusted p-value was 1.0. H1 and H2 are therefore not
+supported at the pre-specified level; the bootstrap interval for the accuracy-seeking explanation
+excludes zero, which we treat as suggestive only.
+
+**Table 4. Differences to code only, qwen2.5-coder:1.5b.**
+
+| Condition | n | Mean diff. | 95% CI | Better / worse | McNemar p | Holm p |
+|---|---|---|---|---|---|---|
+| Notes | 40 | 0.00 | -0.05, 0.04 | 0 / 1 | 1.00 | 1.00 |
+| Accuracy-seeking expl. (audited) | 33 | +0.09 | 0.01, 0.19 | 3 / 0 | .25 | 1.00 |
+| Accuracy-seeking expl. (all) | 40 | +0.10 | 0.02, 0.20 | 4 / 0 | .125 | 1.00 |
+| Misleading expl. | 40 | -0.04 | -0.13, 0.04 | 1 / 3 | .625 | 1.00 |
 
 ### 4.3 Calibration
-[RESULT: Table 5 from `tables/calibration.csv`; Figures 3-4; number of runs without confidence.]
+Stated confidence took only five values (0.8, 0.9, 0.95, 0.99, 1.0), and 603 of 1,440 runs (42%)
+reported 1.0. Table 5 (`tables/calibration.csv`; Figures 3-4) shows that the two larger models were
+slightly under-confident (gap -0.08 to -0.03), which at ceiling accuracy means only that they did
+not say 1.0. The small model reported a mean confidence between 0.995 and 1.000 in every condition
+while its accuracy ranged from 0.51 to 0.65, an over-confidence gap of 0.34 to 0.49. The gap was
+largest with misleading explanations (0.49) and smallest with accuracy-seeking ones (0.34), but the
+change comes entirely from accuracy: confidence did not move. No inferential test of the gap was
+pre-specified, so H3 is assessed descriptively: the direction agrees with H3, the size is small
+relative to the baseline gap (0.45), and it is not evidence that misleading text raises confidence.
+
+**Table 5. Calibration (all runs had a confidence; n = 120 per cell).**
+
+| Model | Condition | Mean conf. | Accuracy | Gap | Brier | ECE |
+|---|---|---|---|---|---|---|
+| qwen2.5-coder:7b | code only | 0.957 | 1.000 | -0.043 | 0.002 | 0.043 |
+| | notes | 0.964 | 1.000 | -0.036 | 0.002 | 0.036 |
+| | accuracy-seeking | 0.965 | 1.000 | -0.035 | 0.002 | 0.035 |
+| | misleading | 0.962 | 1.000 | -0.038 | 0.002 | 0.038 |
+| llama3.1:8b | code only | 0.921 | 1.000 | -0.080 | 0.008 | 0.080 |
+| | notes | 0.924 | 1.000 | -0.076 | 0.007 | 0.076 |
+| | accuracy-seeking | 0.934 | 0.983 | -0.050 | 0.019 | 0.050 |
+| | misleading | 0.923 | 0.983 | -0.061 | 0.022 | 0.061 |
+| qwen2.5-coder:1.5b | code only | 0.998 | 0.550 | 0.448 | 0.450 | 0.448 |
+| | notes | 0.998 | 0.550 | 0.448 | 0.450 | 0.448 |
+| | accuracy-seeking | 0.995 | 0.650 | 0.345 | 0.347 | 0.345 |
+| | misleading | 1.000 | 0.508 | 0.492 | 0.492 | 0.492 |
 
 ### 4.4 Additional analysis
-[RESULT: pass@1 by bug category from `tables/by_category.csv`; 3-5 inspected failure examples
-under the misleading condition, quoted from `results.jsonl`.]
+*By category* (`tables/by_category.csv`). With code only, the small model repaired off-by-one bugs
+most often (0.86) and loop-condition bugs least often (0.23); boundary/operator 0.78, base case
+0.50, data-structure update 0.44. Under misleading explanations boundary/operator fell to 0.56 and
+data-structure update rose to 0.67; with 6-10 instances per category these are descriptive only.
+
+*Unchanged code* (exploratory, not pre-specified; `scripts/unchanged_analysis.py`,
+`tables/unchanged.csv`). Almost every failure of the small model was a response that returned the
+buggy function unchanged: 53 of 54 failures with code only, 54 of 54 with notes and 59 of 59 with
+misleading explanations, i.e. 44%, 45% and 49% of all runs. With accuracy-seeking explanations 29
+of 42 failures were unchanged code (24% of runs). Eleven of the 40 instances were never repaired by
+this model in any condition and 15 were always repaired. The four failures of `llama3.1:8b` were
+changed but still incorrect programs.
+
+**Figures 2-4.** pass@1 by model and condition; over-confidence gap; reliability diagram
+(`figures/fig_pass_at_1.png`, `fig_calibration.png`, `fig_reliability.png`).
 
 ## 5. Discussion
-[RESULT-dependent: answer H1-H3 with the adjusted p-values; compare with [9, 11, 14, 19, 21].]
+**Answer to the research question.** On this benchmark, adding an explanation to the prompt did not
+reliably change repair accuracy. For two 7-8B models the tasks were too easy to reveal any effect.
+For the 1.5B model the differences ran in the hypothesised directions - an explanation that names
+the fault helped, one that endorses the faulty code hurt slightly - but none survived the planned
+correction for multiple comparisons, and the study, with 40 instances, was only able to detect
+large effects. We therefore report H1 and H2 as not supported rather than refuted.
 
-**Threats to validity (apply regardless of outcome).** *Construct:* passing tests is agreement with
-expected outputs on selected inputs, not proof of correctness; stated confidence is a verbal report,
-not a token probability. *Internal:* explanations were written by a model, so the conditions also
-differ in whatever else that model does; the manipulation check was done by one person. *External:*
-40 hand-seeded single-edit bugs in 20 small tasks are not real student errors; quantised local
-models may not represent larger ones; common task types may still be familiar to the models.
-*Conclusion:* with 40 instances only large effects are detectable; non-significant differences are
-not evidence of no effect. The findings concern models and say nothing about how students learn.
+**What the small model did.** The most consistent observation is not about context. The small model
+declared near-certainty in every run and, in close to half of them, handed back the code it was
+asked to fix. An explanation that pointed at the fault roughly halved that behaviour, whereas true
+but non-specific notes had no effect at all. This is consistent with reports that code models'
+confidence does not track correctness [14] and that weaker models overestimate themselves most
+[18], and with findings that repair improves when the prompt carries information that localises
+the failure [11]. It does not match the sensitivity to added context reported for arithmetic
+problems [19]: here irrelevant-but-true text changed nothing, and false text changed little. One
+reading is that single-edit bugs in ten-line functions leave little for a misleading sentence to
+disturb once a model can see the fault at all; this is a conjecture, not something we tested.
+
+**The explanations themselves.** Only 12 of 40 explanations produced with an accuracy-seeking prompt
+were free of false statements, and 7 missed the fault entirely, although the same model repaired
+every one of these bugs when asked to. Fluent explanations of buggy code from an 8B model are thus
+frequently wrong in detail. This echoes work that finds model-written explanations mostly correct
+but uneven in other respects [4], and it matters for tools that show such explanations to novices
+[7, 8]: the explanations were worse than the repairs.
+
+**Suite validation.** A four-case suite of typical inputs missed 11 of 40 seeded bugs and 7 of 9
+boundary/operator bugs, and accepted a hard-coded solution. Had we scored repairs with such a suite,
+unchanged buggy code would often have counted as a successful repair. This agrees with the
+literature on patches that overfit weak tests [26, 27] and supports checking a suite with seeded
+faults before using it as an oracle [23, 25].
+
+**Threats to validity.** *Construct:* passing tests is agreement with expected outputs on selected
+inputs, not proof of correctness; stated confidence is a verbal report with five observed values,
+not a probability derived from the model. *Internal:* explanations were written by one of the
+evaluated models, so explanation conditions also differ in whatever else that model writes; the
+manipulation check was a single pass by an AI assistant and has not yet been confirmed by a second
+rater; the amendment restricting the primary analysis to 33 instances was made after seeing the
+explanations (but before any repair run). *External:* 40 hand-seeded single-edit bugs in 20 small
+tasks are not real student errors; three quantised local models do not represent larger or hosted
+models; common task types may be familiar to the models despite newly written code. *Conclusion:*
+ceiling performance removes two of three models from the comparison; with 40 instances and three
+seeds, non-significant differences are not evidence of no effect; the unchanged-code analysis is
+post hoc; no test was planned for calibration differences. The findings concern models and say
+nothing about how students learn.
 
 ## 6. Conclusion
-[RESULT-dependent, 200-300 words, no new results. Future work: more instances and real student
-bugs; token-probability confidence; the approved classroom study.]
+We asked whether an explanation placed in the prompt - accurate or misleading - changes how well
+open-weight language models repair novice-level Python bugs and how confident they say they are. A
+benchmark of 40 seeded bugs was built and its tests validated: the full suite caught every seeded
+bug where a short suite of typical cases caught 29 of 40. In 1,440 repair runs, two 7-8B models
+were at ceiling in every condition, and for a 1.5B model neither the benefit of an accuracy-seeking
+explanation (+0.09) nor the cost of a misleading one (-0.04) was statistically reliable after
+correction. The hypothesised harm of misleading explanations was not demonstrated. What the data do
+show is that the small model was almost always certain and frequently returned the faulty code
+untouched, and that explanations written by an 8B model for buggy code were fully accurate in only
+12 of 40 cases. For builders of tutoring and repair pipelines the practical points are to validate
+test oracles with seeded faults, not to trust self-reported confidence from small models, and to
+check generated explanations before showing or reusing them. Future work should use harder and
+real student bugs so that capable models are below ceiling, more instances and a second human
+rater, confidence derived from token probabilities, and - with ethical approval - the classroom
+study that motivated this project.
 
 ## Declarations
 See `DECLARATIONS.md` (data and code availability, CRediT, AI use, conflict of interest, funding,
