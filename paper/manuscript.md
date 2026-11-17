@@ -169,7 +169,8 @@ and cached. The two explanation conditions use an identical prompt wrapper, so o
 text differs. No explanation contained a code block.
 
 **Manipulation check.** All 80 explanations were read and labelled (`explanations/AUDIT.csv`). The
-first pass was made by an AI assistant (Claude) and was then reviewed and confirmed by the author. All 40
+first pass was made with the assistance of an AI assistant (Claude) and was then reviewed and confirmed
+by the author. All 40
 misleading explanations presented the buggy code as correct without mentioning a fault. Of the 40
 accuracy-seeking explanations, 12 were labelled accurate, 21 partial (the seeded fault is
 identified, but at least one other statement about the code is false) and 7 inaccurate (the fault
@@ -217,11 +218,11 @@ No human participants were involved. Code, tasks, explanations, raw responses, p
 analysis scripts are in the repository; the README maps each table and figure to a command.
 
 In line with the journal's policy on large language models, we document their use here. Apart from
-the models under study, an AI assistant (Claude, Anthropic) wrote most of the benchmark and
-analysis code, drafted the tasks and seeded bugs, launched the experiment on the author's
-computer, made the first-pass audit of explanations and the classification of surviving mutants,
-searched for literature and drafted the manuscript text. The author reviewed these materials and
-is accountable for the content.
+the models under study, the following work was carried out with the assistance of an AI assistant
+(Claude, Anthropic): development of the benchmark and analysis code, drafting of the tasks and seeded
+bugs, running the experiment on the author's computer, the first-pass audit of explanations and the
+classification of surviving mutants, the literature search, and drafting of the manuscript text. The
+author reviewed these materials and is accountable for the content.
 
 ## 4. Results
 ### 4.1 Suite validation
@@ -376,7 +377,7 @@ regardless of how hard the underlying task is.
 inputs, not proof of correctness; stated confidence is a verbal report with five observed values,
 not a probability derived from the model. *Internal:* explanations were written by one of the
 evaluated models, so explanation conditions also differ in whatever else that model writes; the
-manipulation check was a first pass by an AI assistant confirmed by the single author, with no
+manipulation check was carried out with AI assistance and confirmed by the single author, with no
 independent second rater; the amendment restricting the primary analysis to 33 instances was made after seeing the
 explanations (but before any repair run). *External:* 40 hand-seeded single-edit bugs in 20 small
 tasks are not real student errors; three quantised local models do not represent larger or hosted
