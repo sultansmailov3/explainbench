@@ -1,17 +1,17 @@
 # Appendix A. Journal Fit Statement (draft, 2026-11-17)
 
-Filled from publisher pages and from SCImago / a university library page that reproduce Scopus
-data. **scopus.com/sources could not be opened by the assistant; the author should open it once,
-confirm the two rows marked below, and check the discontinued list and the Hijacked Journal Checker.**
+Scopus rows were checked on 2026-11-17 in the author's browser on scopus.com (source records) and in the
+Retraction Watch Hijacked Journal Checker. The Springer submission-guidelines page could not be read by
+the assistant, so guideline rows marked (verify) are still open.
 Items marked (verify) were not confirmed on an official page.
 
 | Item | Primary journal | Backup journal |
 |---|---|---|
 | Journal title and publisher | Empirical Software Engineering (EMSE), Springer | Computers and Education: Artificial Intelligence, Elsevier |
 | ISSN | 1382-3256 (print), 1573-7616 (electronic) | 2666-920X (electronic) |
-| Scopus coverage (checked 2026-11-17 via SCImago, which uses Scopus data; scopus.com itself was not reachable from the assistant's tools - author to confirm there) | coverage 1996-2026, ongoing: Yes | coverage 2020-2026, ongoing: Yes |
-| Subject area and CiteScore percentile / quartile | Computer Science - Software; SJR best quartile Q1 (SJR 2025: 0.920); CiteScore reported as 8.2-8.6 by secondary sites - take exact value and percentile from Scopus Sources | Education; Computer Science Applications; Artificial Intelligence; Q1, CiteScore 2025: 43.3, 99th percentile (Scopus metrics as shown by WUR Library) |
-| Not on discontinued list / hijacked-journal check done | [author: Yes/No + date] | [author: Yes/No + date] |
+| Scopus coverage verified (scopus.com source record, checked 2026-11-17) | Yes, ongoing: coverage 1996 to 2027; source ID 18650 | Yes, ongoing: coverage 2020 to 2026; source ID 21101074919 |
+| Subject area and CiteScore percentile / quartile | Computer Science: Software; CiteScore 2025 = 8.6; rank 92/503, 81st percentile (Q1); SJR 2025 = 0.920; SNIP 1.429 | Social Sciences: Education (2/1698); Computer Science Applications (5/1022); Artificial Intelligence (4/570); CiteScore 2025 = 43.3; 99th percentile (Q1) in all three |
+| Not on discontinued list / hijacked-journal check done | Yes: Scopus record shows current coverage; not among the 486 entries of the Retraction Watch Hijacked Journal Checker (list updated 2026-11-09, checked 2026-11-17) | Yes: same two checks, same date |
 | Official website (reach it via Scopus record or publisher) | https://link.springer.com/journal/10664 ; submissions via Editorial Manager (editorialmanager.com/emse) | https://www.sciencedirect.com/journal/computers-and-education-artificial-intelligence (verify) |
 | Scope fit (one sentence) | Empirical study of LLM-based program repair, test-suite adequacy and confidence; the journal explicitly solicits negative results and replications | AI in education; the study is motivated by LLM explanations for novice programmers, but has no learners, so fit is weaker |
 | Three related articles, last 3 years | see below | two found, third still needed (see below) |
