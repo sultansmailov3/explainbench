@@ -20,7 +20,7 @@ The work fits Empirical Software Engineering because it is an empirical evaluati
 program repair with a validated test oracle, a pre-specified analysis and full open data, and
 because the journal solicits negative results. It complements recent articles in the journal on
 LLM-based repair (Alhanahnah et al., 2025) and on the effect of prompt design in LLM-based test
-generation (Ouedraogo et al., 2026). [Add third article after reading it.]
+generation (Ouédraogo et al., 2026), and on LLM-based detection and repair of vulnerable code (Belozerov et al., 2026).
 
 The manuscript is original, is not under consideration elsewhere, and has no human participants.
 Code, data and logs are public at https://github.com/sultansmailov3/explainbench (release `final`).

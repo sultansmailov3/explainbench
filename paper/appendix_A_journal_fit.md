@@ -14,7 +14,7 @@ Items marked (verify) were not confirmed on an official page.
 | Not on discontinued list / hijacked-journal check done | Yes: Scopus record shows current coverage; not among the 486 entries of the Retraction Watch Hijacked Journal Checker (list updated 2026-11-09, checked 2026-11-17) | Yes: same two checks, same date |
 | Official website (reach it via Scopus record or publisher) | https://link.springer.com/journal/10664 ; submissions via Editorial Manager (editorialmanager.com/emse) | https://www.sciencedirect.com/journal/computers-and-education-artificial-intelligence (verify) |
 | Scope fit (one sentence) | Empirical study of LLM-based program repair, test-suite adequacy and confidence; the journal explicitly solicits negative results and replications | AI in education; the study is motivated by LLM explanations for novice programmers, but has no learners, so fit is weaker |
-| Three related articles, last 3 years | see below | two found, third still needed (see below) |
+| Three related articles, last 3 years | see below | see below (three found; details of two to verify) |
 | Word limit, template, reference style | no word limit stated; .docx or LaTeX (no Word template; Springer Nature LaTeX template recommended); abstract 150-250 words; 4-6 keywords; citations by name and year, alphabetical reference list with full DOI links | (verify in Guide for Authors) |
 | APC / open access | no submission or publication fee; optional open access after acceptance with an article processing fee | open-access journal; APC applies (USD 1,800 according to a secondary site - verify amount and waivers) |
 | Data policy | data availability statement required; public repository strongly encouraged | (verify) |
@@ -25,12 +25,12 @@ Items marked (verify) were not confirmed on an official page.
 ## Related articles in the primary journal (to read and cite)
 1. Alhanahnah, M., Hasan, M. R., Xu, L., & Bagheri, H. (2025). An empirical evaluation of pre-trained large language models for repairing declarative formal specifications. Empirical Software Engineering, 30, 149. https://doi.org/10.1007/s10664-025-10687-1
 2. Ouedraogo, W. C., Kabore, A. K., Li, Y., Tian, H., Koyuncu, A., Klein, J., Lo, D., & Bissyande, T. F. (2026). Prompt engineering in LLMs for automated unit test generation: A large-scale study. Empirical Software Engineering, 31, 103. https://doi.org/10.1007/s10664-026-10840-4
-3. (title and authors to verify) (2026). Study of the security of LLM-generated code using real developer prompts. Empirical Software Engineering. https://doi.org/10.1007/s10664-026-10812-8
+3. Belozerov, V., Barclay, P. J., & Sami, A. (2026). Secure coding with AI - from detection to repair. Empirical Software Engineering, 31, 93. https://doi.org/10.1007/s10664-026-10812-8
 
 ## Related articles in the backup journal
 1. (authors to verify) (2026). Scoping review and design guidelines on generative-AI conversational agents for programming education. Computers and Education: Artificial Intelligence, 100608. https://doi.org/10.1016/j.caeai.2026.100608
 2. (authors to verify) (2026). LLM-based adaptive learning framework for multiple programming languages. Computers and Education: Artificial Intelligence (preprint arXiv:2603.24940).
-3. [still to find]
+3. Nathaniel, J., Oyelere, S. S., Suhonen, J., & Tedre, M. (2025). Investigating the impact of generative AI integration on the sustenance of higher-order thinking skills and understanding of programming logic. Computers and Education: Artificial Intelligence (December 2025; volume/article number to verify).
 
 ## Honest assessment
 EMSE is a leading journal with demanding standards. This manuscript matches its scope and its

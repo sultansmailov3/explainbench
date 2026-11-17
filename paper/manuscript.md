@@ -37,7 +37,7 @@ explanations written by peers (Leinonen et al. 2023), and observations of novice
 documented cognitive and metacognitive difficulties (Prather et al. 2023). Explanations of code are among the most
 common kinds of support, and their properties are known to shift with the prompt, the code, the
 language and the model version (Oli et al. 2023). Recent tools for novice debugging try to keep the learner
-active rather than hand over a fix, because over-reliance is a recurring concern (Kurniawan et al. 2025; Ma et al. 2023).
+active rather than hand over a fix, because over-reliance is a recurring concern (Kurniawan et al. 2025).
 
 An explanation is not always right. A model asked to describe a buggy function may describe the
 intended behaviour instead of the actual one, and the result reads as a fluent endorsement of
@@ -49,7 +49,7 @@ loops - and language models are known to be sensitive to context that should not
 (Shi et al. 2023). If a misleading explanation lowers repair accuracy while leaving stated confidence
 unchanged, any system that chains explanation and repair inherits that failure. Calibration of
 code models is itself an open problem: generated code is frequently accompanied by confidence that
-does not track correctness (Spiess et al. 2025; Wang et al. 2025; Singh et al. 2025).
+does not track correctness (Spiess et al. 2025; Singh et al. 2025).
 
 This paper grew out of a planned classroom study on whether LLM explanations affect novices'
 independent debugging. That study requires human participants and prior ethical approval and is
@@ -75,26 +75,25 @@ results, Section 5 discusses them and their limits, and Section 6 concludes.
 ## 2. Related Work
 **LLM explanations for novices.** Work on model-written explanations has mostly evaluated their
 quality or their reception by learners. Explanations were judged favourably against student-written
-ones (Leinonen et al. 2023); their correctness is typically high while completeness, conciseness and specificity lag
-(Oli et al. 2023); and a large randomised classroom comparison examined whether explanations that stress
-different aspects of a program help more than generic ones (Bernstein et al. 2026). Qualitative work on novices solving
-tracing problems with a chatbot available shows varied patterns of use (Adeeb et al. 2025). These studies treat the
+ones (Leinonen et al. 2023), and their correctness is typically high while completeness, conciseness and specificity lag
+(Oli et al. 2023). These studies treat the
 explanation as an output for a human reader. We treat it as an input to a model.
 
-**LLM-based repair of novice programs.** Repair of student programs with language models has
-moved from single systems evaluated on a few hundred submissions (Zhang et al. 2022) to shared benchmarks with
+**LLM-based repair of novice programs.** Repair of student programs with language models is now
+evaluated on shared benchmarks with
 functional-correctness metrics such as pass@k, in which the prompt may also carry extra context
 such as grader feedback (Koutcheme et al. 2024). Evaluations across languages report that adding failing-test
 information to the prompt improves repair (Campos et al. 2025). Small single-function benchmarks with one-line
 defects (Lin et al. 2017) and hand-written function-level benchmarks scored by unit tests (Chen et al. 2021) established the
 evaluation style we follow. Recent empirical studies in software engineering likewise evaluate language models on repair
 beyond conventional code (Alhanahnah et al. 2025) and examine how prompt design changes the quality of generated
-tests (Ouedraogo et al. 2026). None of these studies varies the *truthfulness* of the added context.
+tests (Ouédraogo et al. 2026), and LLM-based detection and repair of vulnerabilities in real
+developer code has been assessed with re-scanning and manual review (Belozerov et al. 2026). None of these studies varies the *truthfulness* of the added context.
 
 **Confidence and calibration.** Modern neural networks are often miscalibrated (Guo et al. 2017). Language
 models can be asked to assess their own answers, with encouraging but task-dependent results (Kadavath et al. 2022).
 For code, studies find that confidence is not well aligned with correctness without correction
-(Spiess et al. 2025), that calibration of code reasoning can be improved with prompting and post-hoc scaling (Wang et al. 2025),
+(Spiess et al. 2025)
 and that weaker models overestimate themselves most (Singh et al. 2025). We add one factor these studies hold
 fixed: what the prompt says about the code.
 
@@ -355,7 +354,7 @@ were free of false statements, and 7 missed the fault entirely, although the sam
 every one of these bugs when asked to. Fluent explanations of buggy code from an 8B model are thus
 frequently wrong in detail. This echoes work that finds model-written explanations mostly correct
 but uneven in other respects (Oli et al. 2023), and it matters for tools that show such explanations to novices
-(Kurniawan et al. 2025; Ma et al. 2023): the explanations were worse than the repairs.
+(Kurniawan et al. 2025): the explanations were worse than the repairs.
 
 **Suite validation.** A four-case suite of typical inputs missed 11 of 40 seeded bugs and 7 of 9
 boundary/operator bugs, and accepted a hard-coded solution. Had we scored repairs with such a suite,
