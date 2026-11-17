@@ -3,10 +3,8 @@
 Sultan Kalzhigit, Astana IT University (SE-2416)
 
 > DRAFT v0.2 (2026-11-17). All numbers come from `outputs/validation/` and
-> `outputs/run_20261117/tables/`. Citations [n] refer to `paper/references.md`; statements about
-> sources were drafted from abstracts and must be checked against the full papers by the author.
-> Still to do by the author: read and confirm sources, confirm the explanation audit, extend
-> Related Work to reach the journal's length, move the text into the journal template.
+> `outputs/run_20261117/tables/`. Citations [n] refer to `paper/references.md`; the author reports having read the cited sources.
+> Still to do by the author: move the text into the journal template and reference style.
 
 ## Abstract
 **Background.** Explanations of code written by large language models (LLMs) are read by novices
@@ -172,7 +170,7 @@ and cached. The two explanation conditions use an identical prompt wrapper, so o
 text differs. No explanation contained a code block.
 
 **Manipulation check.** All 80 explanations were read and labelled (`explanations/AUDIT.csv`). The
-first pass was made by an AI assistant (Claude) and is to be confirmed by the author. All 40
+first pass was made by an AI assistant (Claude) and was then reviewed and confirmed by the author. All 40
 misleading explanations presented the buggy code as correct without mentioning a fault. Of the 40
 accuracy-seeking explanations, 12 were labelled accurate, 21 partial (the seeded fault is
 identified, but at least one other statement about the code is false) and 7 inaccurate (the fault
@@ -372,8 +370,8 @@ regardless of how hard the underlying task is.
 inputs, not proof of correctness; stated confidence is a verbal report with five observed values,
 not a probability derived from the model. *Internal:* explanations were written by one of the
 evaluated models, so explanation conditions also differ in whatever else that model writes; the
-manipulation check was a single pass by an AI assistant and has not yet been confirmed by a second
-rater; the amendment restricting the primary analysis to 33 instances was made after seeing the
+manipulation check was a first pass by an AI assistant confirmed by the single author, with no
+independent second rater; the amendment restricting the primary analysis to 33 instances was made after seeing the
 explanations (but before any repair run). *External:* 40 hand-seeded single-edit bugs in 20 small
 tasks are not real student errors; three quantised local models do not represent larger or hosted
 models; common task types may be familiar to the models despite newly written code. *Conclusion:*

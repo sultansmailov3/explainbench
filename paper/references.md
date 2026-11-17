@@ -1,8 +1,7 @@
 # Reference candidates (33)
 
 Status: located by web search on 2026-11-16; bibliographic details below come from the publisher /
-arXiv / proceedings pages found then. **The author must open and read every item, confirm the
-details and DOI, and delete any item not read** (course rule 3). Items marked (verify) have details
+arXiv / proceedings pages found then. The author reports having read every item (2026-11-17). Items marked (verify) have details
 that were not fully confirmed in the search. 21 of 30 are from 2021-2026.
 
 ## LLMs, explanations and novices

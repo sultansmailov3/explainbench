@@ -18,8 +18,7 @@ addition, an AI assistant (Claude, Anthropic) was used between 15 and 17 Novembe
 most of the benchmark and analysis code, to draft tasks and seeded bugs, to launch the experiment
 on the author's computer, to make the first-pass audit of the generated explanations and the
 classification of surviving mutants, to search for literature, and to draft the manuscript text.
-The author reviewed the materials, is responsible for confirming the audit, the cited sources and
-every reported number against the logs, and takes full responsibility for the content. AI tools
+The author reviewed the materials, confirmed the audit, read the cited sources, is responsible for every reported number, and takes full responsibility for the content. AI tools
 are not listed as authors.
 
 ## CRediT author contributions

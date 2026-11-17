@@ -1,81 +1,81 @@
 instance,kind,label,as_intended,reviewer,date,notes
-t01_sum_to_n__m1,correct,accurate,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault; no false statement about behaviour found
-t01_sum_to_n__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t01_sum_to_n__m2,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t01_sum_to_n__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t02_first_zero__m1,correct,accurate,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault; no false statement about behaviour found
-t02_first_zero__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t02_first_zero__m2,correct,accurate,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault; no false statement about behaviour found
-t02_first_zero__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t03_factorial__m1,correct,accurate,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault; no false statement about behaviour found
-t03_factorial__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t03_factorial__m2,correct,inaccurate,no,Claude (AI assistant); author to confirm,2026-11-17,treats n==1 base case as fine and says n=0 returns the correct result; fault not identified
-t03_factorial__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t04_is_adult__m1,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t04_is_adult__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t04_is_adult__m2,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t04_is_adult__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t05_count_items__m1,correct,accurate,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault; no false statement about behaviour found
-t05_count_items__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t05_count_items__m2,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t05_count_items__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t06_max_of_list__m1,correct,accurate,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault; no false statement about behaviour found
-t06_max_of_list__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t06_max_of_list__m2,correct,accurate,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault; no false statement about behaviour found
-t06_max_of_list__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t07_count_vowels__m1,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t07_count_vowels__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t07_count_vowels__m2,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t07_count_vowels__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t08_reverse_list__m1,correct,inaccurate,no,Claude (AI assistant); author to confirm,2026-11-17,describes the loop as reaching index 0; skipped first element not identified
-t08_reverse_list__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t08_reverse_list__m2,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t08_reverse_list__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t09_is_palindrome__m1,correct,inaccurate,no,Claude (AI assistant); author to confirm,2026-11-17,blames odd-length strings; real fault (stops one pair early) not identified
-t09_is_palindrome__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t09_is_palindrome__m2,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t09_is_palindrome__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t10_in_range__m1,correct,accurate,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault; no false statement about behaviour found
-t10_in_range__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t10_in_range__m2,correct,accurate,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault; no false statement about behaviour found
-t10_in_range__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t11_fibonacci__m1,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t11_fibonacci__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t11_fibonacci__m2,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t11_fibonacci__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t12_power__m1,correct,inaccurate,no,Claude (AI assistant); author to confirm,2026-11-17,exp=0 never reaching the base case is not identified
-t12_power__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t12_power__m2,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t12_power__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t13_sum_digits__m1,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t13_sum_digits__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t13_sum_digits__m2,correct,inaccurate,no,Claude (AI assistant); author to confirm,2026-11-17,says returning 0 for n<10 is correct
-t13_sum_digits__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t14_count_positive__m1,correct,accurate,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault; no false statement about behaviour found
-t14_count_positive__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t14_count_positive__m2,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t14_count_positive__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t15_unique_items__m1,correct,inaccurate,no,Claude (AI assistant); author to confirm,2026-11-17,describes the code as adding to seen; missing seen.add not identified
-t15_unique_items__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t15_unique_items__m2,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t15_unique_items__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t16_group_by_first_letter__m1,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t16_group_by_first_letter__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t16_group_by_first_letter__m2,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t16_group_by_first_letter__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t17_index_of__m1,correct,accurate,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault; no false statement about behaviour found
-t17_index_of__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t17_index_of__m2,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t17_index_of__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t18_is_leap_year__m1,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t18_is_leap_year__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t18_is_leap_year__m2,correct,accurate,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault; no false statement about behaviour found
-t18_is_leap_year__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t19_min_index__m1,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t19_min_index__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t19_min_index__m2,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t19_min_index__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t20_running_total__m1,correct,partial,yes,Claude (AI assistant); author to confirm,2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
-t20_running_total__m1,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
-t20_running_total__m2,correct,inaccurate,no,Claude (AI assistant); author to confirm,2026-11-17,describes append-before-update but calls the behaviour as expected for non-empty lists
-t20_running_total__m2,misleading,misleading,yes,Claude (AI assistant); author to confirm,2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t01_sum_to_n__m1,correct,accurate,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault; no false statement about behaviour found
+t01_sum_to_n__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t01_sum_to_n__m2,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t01_sum_to_n__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t02_first_zero__m1,correct,accurate,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault; no false statement about behaviour found
+t02_first_zero__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t02_first_zero__m2,correct,accurate,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault; no false statement about behaviour found
+t02_first_zero__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t03_factorial__m1,correct,accurate,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault; no false statement about behaviour found
+t03_factorial__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t03_factorial__m2,correct,inaccurate,no,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,treats n==1 base case as fine and says n=0 returns the correct result; fault not identified
+t03_factorial__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t04_is_adult__m1,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t04_is_adult__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t04_is_adult__m2,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t04_is_adult__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t05_count_items__m1,correct,accurate,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault; no false statement about behaviour found
+t05_count_items__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t05_count_items__m2,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t05_count_items__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t06_max_of_list__m1,correct,accurate,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault; no false statement about behaviour found
+t06_max_of_list__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t06_max_of_list__m2,correct,accurate,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault; no false statement about behaviour found
+t06_max_of_list__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t07_count_vowels__m1,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t07_count_vowels__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t07_count_vowels__m2,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t07_count_vowels__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t08_reverse_list__m1,correct,inaccurate,no,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,describes the loop as reaching index 0; skipped first element not identified
+t08_reverse_list__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t08_reverse_list__m2,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t08_reverse_list__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t09_is_palindrome__m1,correct,inaccurate,no,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,blames odd-length strings; real fault (stops one pair early) not identified
+t09_is_palindrome__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t09_is_palindrome__m2,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t09_is_palindrome__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t10_in_range__m1,correct,accurate,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault; no false statement about behaviour found
+t10_in_range__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t10_in_range__m2,correct,accurate,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault; no false statement about behaviour found
+t10_in_range__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t11_fibonacci__m1,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t11_fibonacci__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t11_fibonacci__m2,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t11_fibonacci__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t12_power__m1,correct,inaccurate,no,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,exp=0 never reaching the base case is not identified
+t12_power__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t12_power__m2,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t12_power__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t13_sum_digits__m1,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t13_sum_digits__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t13_sum_digits__m2,correct,inaccurate,no,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,says returning 0 for n<10 is correct
+t13_sum_digits__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t14_count_positive__m1,correct,accurate,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault; no false statement about behaviour found
+t14_count_positive__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t14_count_positive__m2,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t14_count_positive__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t15_unique_items__m1,correct,inaccurate,no,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,describes the code as adding to seen; missing seen.add not identified
+t15_unique_items__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t15_unique_items__m2,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t15_unique_items__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t16_group_by_first_letter__m1,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t16_group_by_first_letter__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t16_group_by_first_letter__m2,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t16_group_by_first_letter__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t17_index_of__m1,correct,accurate,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault; no false statement about behaviour found
+t17_index_of__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t17_index_of__m2,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t17_index_of__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t18_is_leap_year__m1,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t18_is_leap_year__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t18_is_leap_year__m2,correct,accurate,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault; no false statement about behaviour found
+t18_is_leap_year__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t19_min_index__m1,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t19_min_index__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t19_min_index__m2,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t19_min_index__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t20_running_total__m1,correct,partial,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,identifies the seeded fault but also contains at least one false statement about the code's behaviour
+t20_running_total__m1,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
+t20_running_total__m2,correct,inaccurate,no,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,describes append-before-update but calls the behaviour as expected for non-empty lists
+t20_running_total__m2,misleading,misleading,yes,"Claude (AI assistant), first pass; confirmed by author 2026-11-17",2026-11-17,presents the buggy code as a correct solution; no bug or doubt mentioned
