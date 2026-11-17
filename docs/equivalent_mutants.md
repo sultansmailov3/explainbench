@@ -1,6 +1,6 @@
 # Surviving generated mutants: manual classification (2026-11-17)
 
-Classified by an AI assistant (Claude) by reasoning about the code; confirmed by the author on 2026-11-17.
+Classified with AI assistance (Claude) by reasoning about the code; confirmed by the author on 2026-11-17.
 All five are **equivalent** to their reference for every valid input, so no test can detect them.
 
 | Task | Mutant | Change | Why equivalent |

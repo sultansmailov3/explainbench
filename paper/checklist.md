@@ -8,7 +8,7 @@
 | Experiment run (1,440 calls), tables, figures in repo | done |
 | Manuscript draft with results, discussion, conclusion, abstract | done (about 4,550 words; target 4,500-7,500) |
 | Explanation audit confirmed by the author (human) | done (author's statement, 2026-11-17) |
-| Classify 5 surviving generated mutants | done by AI assistant (all equivalent, `docs/equivalent_mutants.md`); confirmed by author |
+| Classify 5 surviving generated mutants | done with AI assistance (all equivalent, `docs/equivalent_mutants.md`); confirmed by author |
 | Read all cited sources; fix items marked (verify); add sources for McNemar, bootstrap, Brier | **to do** |
 | Choose primary + backup journal; verify in Scopus; Appendix A; 3 related articles | done (Scopus and hijacked check 2026-11-17); primary-journal guidelines read; backup-journal rows still (verify) |
 | Manuscript per journal guidelines | .docx built, name-year citations, Statements and Declarations, AI use in Methods; 25 references in Springer name-year format; styled Word file (`scripts/build_docx.py`) |
