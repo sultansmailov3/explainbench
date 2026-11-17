@@ -89,7 +89,9 @@ functional-correctness metrics such as pass@k, in which the prompt may also carr
 such as grader feedback [9]. Evaluations across languages report that adding failing-test
 information to the prompt improves repair [11]. Small single-function benchmarks with one-line
 defects [12] and hand-written function-level benchmarks scored by unit tests [13] established the
-evaluation style we follow. None of these studies varies the *truthfulness* of the added context.
+evaluation style we follow. Recent empirical studies in software engineering likewise evaluate language models on repair
+beyond conventional code [31] and examine how prompt design changes the quality of generated
+tests [32]. None of these studies varies the *truthfulness* of the added context.
 
 **Confidence and calibration.** Modern neural networks are often miscalibrated [15]. Language
 models can be asked to assess their own answers, with encouraging but task-dependent results [16].

@@ -1,4 +1,4 @@
-# Reference candidates (30)
+# Reference candidates (33)
 
 Status: located by web search on 2026-11-16; bibliographic details below come from the publisher /
 arXiv / proceedings pages found then. **The author must open and read every item, confirm the
@@ -46,6 +46,11 @@ that were not fully confirmed in the search. 21 of 30 are from 2021-2026.
 
 ## Statistics
 30. Holm, S. (1979). A simple sequentially rejective multiple test procedure. Scandinavian Journal of Statistics, 6(2), 65-70.
+
+## Target-journal articles
+31. Alhanahnah, M., Hasan, M. R., Xu, L., & Bagheri, H. (2025). An empirical evaluation of pre-trained large language models for repairing declarative formal specifications. Empirical Software Engineering, 30, 149. https://doi.org/10.1007/s10664-025-10687-1
+32. Ouedraogo, W. C., et al. (2026). Prompt engineering in LLMs for automated unit test generation: A large-scale study. Empirical Software Engineering, 31, 103. https://doi.org/10.1007/s10664-026-10840-4
+33. (verify) (2026). LLM-generated code security with real developer prompts. Empirical Software Engineering. https://doi.org/10.1007/s10664-026-10812-8
 
 Still needed (find, read, add): a source for McNemar's test, the bootstrap, the Brier score, and
 >= 3 recent articles from the chosen target journal (Journal Fit Statement).
