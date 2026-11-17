@@ -1,0 +1,834 @@
+{
+  "manifest": {
+    "date_utc": "2026-11-16T21:17:02+00:00",
+    "python": "3.13.15",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "models": {
+      "qwen2.5-coder:7b": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+      "llama3.1:8b": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+      "qwen2.5-coder:1.5b": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668"
+    },
+    "conditions": [
+      "code_only",
+      "docs",
+      "correct_expl",
+      "misleading_expl"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "temperature": 0.2,
+    "max_tokens": 1024,
+    "n_instances": 40,
+    "mock": false,
+    "tasks_sha256": {
+      "t01_sum_to_n": "31e83c61f18a081e001250d517ca1d4c70fbc363689e2733c5b2fee396a025e6",
+      "t02_first_zero": "1c66c1f813d035a56806ff865e4fb99e1da86f02e4d07c5e5fa3d777d79e14f9",
+      "t03_factorial": "2d5a778b3acca6e1bd074c50cbf91e8b5eb6edaf0cdf29716b6e1ebfb2fd6ea3",
+      "t04_is_adult": "b6d61a76edd1a6a0cce2d27f2c665698fa23da553bd7dbec7a789f877cdc6d97",
+      "t05_count_items": "c316cc943692009bdec130a7136241fb9eb7e66f74a99ebf08a56c76ed43e85e",
+      "t06_max_of_list": "d2676af680d2cd15e35dc6d6d99fee91296c78d7d66dd52b9c70110b2bcdf458",
+      "t07_count_vowels": "2d167a7905d9454a70823f61ddb6ba65a1ced2a30dc43d2093e54468dd5518c9",
+      "t08_reverse_list": "513e18e193be88e471edebb8d1146e4af099c69941b4fd662e1c475f391e659b",
+      "t09_is_palindrome": "1bb9fdd29ad72b0e9e228488a08caa0fabe46caf7905be4f9e83534218ccdfa0",
+      "t10_in_range": "55e874e79849a6b91272ee96988c857747e4a5f4e4db9a11a0b1526ecc739259",
+      "t11_fibonacci": "a878bcf84225025d6ee03ce5f93c14d4df14d3edd516a0cdc0c899a087558b05",
+      "t12_power": "0c30046f46f17010ea8737394c3d3f2ef04438bce1175e3386e5702c30a33588",
+      "t13_sum_digits": "234d23b1f8e31bfc903702a0239cbe7291fdaeb7ad506b589f75a422a66ce20a",
+      "t14_count_positive": "b1c3c1860a98e907d21f63cf024d70b04a11c4acfca2e686bf3ab18d311375c4",
+      "t15_unique_items": "93c48be9777c9646cf3f054b88aa1b69cb9e8b5858114ac635e58b99e56b332c",
+      "t16_group_by_first_letter": "eaf5b680a1aa8b66fea0ca31b123513c2cf80bfb327f62fc421b81f1f674d8d8",
+      "t17_index_of": "536131387ec12d53c3fd97dd4c49319c866e234e474a967dd46e239a27d8c181",
+      "t18_is_leap_year": "a9e1e40f83b1779fbeaaa903fd77c870b49a5e8ea0cea8f682f293822e3d966e",
+      "t19_min_index": "58489f45b87be37c9b41913cec051da71a11b17791f0b99e066ff2bb768539f7",
+      "t20_running_total": "77920ab13829d0fc60b9c1c154ae6939ea22b931676c769fc6279bf76db99963"
+    }
+  },
+  "pass_at_1": [
+    {
+      "model": "llama3.1:8b",
+      "condition": "code_only",
+      "n_instances": 40,
+      "n_runs": 120,
+      "pass_at_1": 1.0,
+      "ci_lo": 1.0,
+      "ci_hi": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "correct_expl",
+      "n_instances": 40,
+      "n_runs": 120,
+      "pass_at_1": 0.9833,
+      "ci_lo": 0.95,
+      "ci_hi": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "docs",
+      "n_instances": 40,
+      "n_runs": 120,
+      "pass_at_1": 1.0,
+      "ci_lo": 1.0,
+      "ci_hi": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "misleading_expl",
+      "n_instances": 40,
+      "n_runs": 120,
+      "pass_at_1": 0.9833,
+      "ci_lo": 0.95,
+      "ci_hi": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "code_only",
+      "n_instances": 40,
+      "n_runs": 120,
+      "pass_at_1": 0.55,
+      "ci_lo": 0.4,
+      "ci_hi": 0.7
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "correct_expl",
+      "n_instances": 40,
+      "n_runs": 120,
+      "pass_at_1": 0.65,
+      "ci_lo": 0.5,
+      "ci_hi": 0.7917
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "docs",
+      "n_instances": 40,
+      "n_runs": 120,
+      "pass_at_1": 0.55,
+      "ci_lo": 0.4,
+      "ci_hi": 0.7
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "misleading_expl",
+      "n_instances": 40,
+      "n_runs": 120,
+      "pass_at_1": 0.5083,
+      "ci_lo": 0.3583,
+      "ci_hi": 0.6583
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "code_only",
+      "n_instances": 40,
+      "n_runs": 120,
+      "pass_at_1": 1.0,
+      "ci_lo": 1.0,
+      "ci_hi": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "correct_expl",
+      "n_instances": 40,
+      "n_runs": 120,
+      "pass_at_1": 1.0,
+      "ci_lo": 1.0,
+      "ci_hi": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "docs",
+      "n_instances": 40,
+      "n_runs": 120,
+      "pass_at_1": 1.0,
+      "ci_lo": 1.0,
+      "ci_hi": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "misleading_expl",
+      "n_instances": 40,
+      "n_runs": 120,
+      "pass_at_1": 1.0,
+      "ci_lo": 1.0,
+      "ci_hi": 1.0
+    }
+  ],
+  "comparisons": [
+    {
+      "model": "llama3.1:8b",
+      "condition": "correct_expl",
+      "vs": "code_only",
+      "n_pairs": 40,
+      "mean_diff": -0.0167,
+      "ci_lo": -0.05,
+      "ci_hi": 0.0,
+      "better_than_baseline": 0,
+      "worse_than_baseline": 1,
+      "p_mcnemar_exact": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "docs",
+      "vs": "code_only",
+      "n_pairs": 40,
+      "mean_diff": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.0,
+      "better_than_baseline": 0,
+      "worse_than_baseline": 0,
+      "p_mcnemar_exact": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "misleading_expl",
+      "vs": "code_only",
+      "n_pairs": 40,
+      "mean_diff": -0.0167,
+      "ci_lo": -0.05,
+      "ci_hi": 0.0,
+      "better_than_baseline": 0,
+      "worse_than_baseline": 1,
+      "p_mcnemar_exact": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "correct_expl",
+      "vs": "code_only",
+      "n_pairs": 40,
+      "mean_diff": 0.1,
+      "ci_lo": 0.0167,
+      "ci_hi": 0.2,
+      "better_than_baseline": 4,
+      "worse_than_baseline": 0,
+      "p_mcnemar_exact": 0.125,
+      "p_holm": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "docs",
+      "vs": "code_only",
+      "n_pairs": 40,
+      "mean_diff": 0.0,
+      "ci_lo": -0.05,
+      "ci_hi": 0.0417,
+      "better_than_baseline": 0,
+      "worse_than_baseline": 1,
+      "p_mcnemar_exact": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "misleading_expl",
+      "vs": "code_only",
+      "n_pairs": 40,
+      "mean_diff": -0.0417,
+      "ci_lo": -0.125,
+      "ci_hi": 0.0417,
+      "better_than_baseline": 1,
+      "worse_than_baseline": 3,
+      "p_mcnemar_exact": 0.625,
+      "p_holm": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "correct_expl",
+      "vs": "code_only",
+      "n_pairs": 40,
+      "mean_diff": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.0,
+      "better_than_baseline": 0,
+      "worse_than_baseline": 0,
+      "p_mcnemar_exact": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "docs",
+      "vs": "code_only",
+      "n_pairs": 40,
+      "mean_diff": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.0,
+      "better_than_baseline": 0,
+      "worse_than_baseline": 0,
+      "p_mcnemar_exact": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "misleading_expl",
+      "vs": "code_only",
+      "n_pairs": 40,
+      "mean_diff": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.0,
+      "better_than_baseline": 0,
+      "worse_than_baseline": 0,
+      "p_mcnemar_exact": 1.0,
+      "p_holm": 1.0
+    }
+  ],
+  "calibration": [
+    {
+      "model": "llama3.1:8b",
+      "condition": "code_only",
+      "n_with_confidence": 120,
+      "n_runs": 120,
+      "mean_confidence": 0.9205,
+      "accuracy": 1.0,
+      "overconfidence_gap": -0.0795,
+      "brier": 0.0076,
+      "ece": 0.0795
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "correct_expl",
+      "n_with_confidence": 120,
+      "n_runs": 120,
+      "mean_confidence": 0.9338,
+      "accuracy": 0.9833,
+      "overconfidence_gap": -0.0495,
+      "brier": 0.0192,
+      "ece": 0.0495
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "docs",
+      "n_with_confidence": 120,
+      "n_runs": 120,
+      "mean_confidence": 0.9238,
+      "accuracy": 1.0,
+      "overconfidence_gap": -0.0762,
+      "brier": 0.0069,
+      "ece": 0.0762
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "misleading_expl",
+      "n_with_confidence": 120,
+      "n_runs": 120,
+      "mean_confidence": 0.9228,
+      "accuracy": 0.9833,
+      "overconfidence_gap": -0.0606,
+      "brier": 0.022,
+      "ece": 0.0606
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "code_only",
+      "n_with_confidence": 120,
+      "n_runs": 120,
+      "mean_confidence": 0.9983,
+      "accuracy": 0.55,
+      "overconfidence_gap": 0.4483,
+      "brier": 0.4502,
+      "ece": 0.4483
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "correct_expl",
+      "n_with_confidence": 120,
+      "n_runs": 120,
+      "mean_confidence": 0.9948,
+      "accuracy": 0.65,
+      "overconfidence_gap": 0.3448,
+      "brier": 0.347,
+      "ece": 0.3448
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "docs",
+      "n_with_confidence": 120,
+      "n_runs": 120,
+      "mean_confidence": 0.9983,
+      "accuracy": 0.55,
+      "overconfidence_gap": 0.4483,
+      "brier": 0.4502,
+      "ece": 0.4483
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "misleading_expl",
+      "n_with_confidence": 120,
+      "n_runs": 120,
+      "mean_confidence": 1.0,
+      "accuracy": 0.5083,
+      "overconfidence_gap": 0.4917,
+      "brier": 0.4917,
+      "ece": 0.4917
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "code_only",
+      "n_with_confidence": 120,
+      "n_runs": 120,
+      "mean_confidence": 0.9571,
+      "accuracy": 1.0,
+      "overconfidence_gap": -0.0429,
+      "brier": 0.0022,
+      "ece": 0.0429
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "correct_expl",
+      "n_with_confidence": 120,
+      "n_runs": 120,
+      "mean_confidence": 0.9654,
+      "accuracy": 1.0,
+      "overconfidence_gap": -0.0346,
+      "brier": 0.0017,
+      "ece": 0.0346
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "docs",
+      "n_with_confidence": 120,
+      "n_runs": 120,
+      "mean_confidence": 0.9642,
+      "accuracy": 1.0,
+      "overconfidence_gap": -0.0358,
+      "brier": 0.0018,
+      "ece": 0.0358
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "misleading_expl",
+      "n_with_confidence": 120,
+      "n_runs": 120,
+      "mean_confidence": 0.9621,
+      "accuracy": 1.0,
+      "overconfidence_gap": -0.0379,
+      "brier": 0.0019,
+      "ece": 0.0379
+    }
+  ],
+  "by_category": [
+    {
+      "model": "llama3.1:8b",
+      "condition": "code_only",
+      "category": "base_case",
+      "n_instances": 8,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "code_only",
+      "category": "boundary_operator",
+      "n_instances": 9,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "code_only",
+      "category": "data_structure_update",
+      "n_instances": 6,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "code_only",
+      "category": "loop_condition",
+      "n_instances": 10,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "code_only",
+      "category": "off_by_one",
+      "n_instances": 7,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "correct_expl",
+      "category": "base_case",
+      "n_instances": 8,
+      "pass_at_1": 0.9167
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "correct_expl",
+      "category": "boundary_operator",
+      "n_instances": 9,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "correct_expl",
+      "category": "data_structure_update",
+      "n_instances": 6,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "correct_expl",
+      "category": "loop_condition",
+      "n_instances": 10,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "correct_expl",
+      "category": "off_by_one",
+      "n_instances": 7,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "docs",
+      "category": "base_case",
+      "n_instances": 8,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "docs",
+      "category": "boundary_operator",
+      "n_instances": 9,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "docs",
+      "category": "data_structure_update",
+      "n_instances": 6,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "docs",
+      "category": "loop_condition",
+      "n_instances": 10,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "docs",
+      "category": "off_by_one",
+      "n_instances": 7,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "misleading_expl",
+      "category": "base_case",
+      "n_instances": 8,
+      "pass_at_1": 0.9167
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "misleading_expl",
+      "category": "boundary_operator",
+      "n_instances": 9,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "misleading_expl",
+      "category": "data_structure_update",
+      "n_instances": 6,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "misleading_expl",
+      "category": "loop_condition",
+      "n_instances": 10,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "condition": "misleading_expl",
+      "category": "off_by_one",
+      "n_instances": 7,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "code_only",
+      "category": "base_case",
+      "n_instances": 8,
+      "pass_at_1": 0.5
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "code_only",
+      "category": "boundary_operator",
+      "n_instances": 9,
+      "pass_at_1": 0.7778
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "code_only",
+      "category": "data_structure_update",
+      "n_instances": 6,
+      "pass_at_1": 0.4444
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "code_only",
+      "category": "loop_condition",
+      "n_instances": 10,
+      "pass_at_1": 0.2333
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "code_only",
+      "category": "off_by_one",
+      "n_instances": 7,
+      "pass_at_1": 0.8571
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "correct_expl",
+      "category": "base_case",
+      "n_instances": 8,
+      "pass_at_1": 0.625
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "correct_expl",
+      "category": "boundary_operator",
+      "n_instances": 9,
+      "pass_at_1": 0.8519
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "correct_expl",
+      "category": "data_structure_update",
+      "n_instances": 6,
+      "pass_at_1": 0.5
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "correct_expl",
+      "category": "loop_condition",
+      "n_instances": 10,
+      "pass_at_1": 0.4333
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "correct_expl",
+      "category": "off_by_one",
+      "n_instances": 7,
+      "pass_at_1": 0.8571
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "docs",
+      "category": "base_case",
+      "n_instances": 8,
+      "pass_at_1": 0.5417
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "docs",
+      "category": "boundary_operator",
+      "n_instances": 9,
+      "pass_at_1": 0.7407
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "docs",
+      "category": "data_structure_update",
+      "n_instances": 6,
+      "pass_at_1": 0.5
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "docs",
+      "category": "loop_condition",
+      "n_instances": 10,
+      "pass_at_1": 0.2
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "docs",
+      "category": "off_by_one",
+      "n_instances": 7,
+      "pass_at_1": 0.8571
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "misleading_expl",
+      "category": "base_case",
+      "n_instances": 8,
+      "pass_at_1": 0.5
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "misleading_expl",
+      "category": "boundary_operator",
+      "n_instances": 9,
+      "pass_at_1": 0.5556
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "misleading_expl",
+      "category": "data_structure_update",
+      "n_instances": 6,
+      "pass_at_1": 0.6667
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "misleading_expl",
+      "category": "loop_condition",
+      "n_instances": 10,
+      "pass_at_1": 0.1667
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "condition": "misleading_expl",
+      "category": "off_by_one",
+      "n_instances": 7,
+      "pass_at_1": 0.8095
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "code_only",
+      "category": "base_case",
+      "n_instances": 8,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "code_only",
+      "category": "boundary_operator",
+      "n_instances": 9,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "code_only",
+      "category": "data_structure_update",
+      "n_instances": 6,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "code_only",
+      "category": "loop_condition",
+      "n_instances": 10,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "code_only",
+      "category": "off_by_one",
+      "n_instances": 7,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "correct_expl",
+      "category": "base_case",
+      "n_instances": 8,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "correct_expl",
+      "category": "boundary_operator",
+      "n_instances": 9,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "correct_expl",
+      "category": "data_structure_update",
+      "n_instances": 6,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "correct_expl",
+      "category": "loop_condition",
+      "n_instances": 10,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "correct_expl",
+      "category": "off_by_one",
+      "n_instances": 7,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "docs",
+      "category": "base_case",
+      "n_instances": 8,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "docs",
+      "category": "boundary_operator",
+      "n_instances": 9,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "docs",
+      "category": "data_structure_update",
+      "n_instances": 6,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "docs",
+      "category": "loop_condition",
+      "n_instances": 10,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "docs",
+      "category": "off_by_one",
+      "n_instances": 7,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "misleading_expl",
+      "category": "base_case",
+      "n_instances": 8,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "misleading_expl",
+      "category": "boundary_operator",
+      "n_instances": 9,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "misleading_expl",
+      "category": "data_structure_update",
+      "n_instances": 6,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "misleading_expl",
+      "category": "loop_condition",
+      "n_instances": 10,
+      "pass_at_1": 1.0
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "condition": "misleading_expl",
+      "category": "off_by_one",
+      "n_instances": 7,
+      "pass_at_1": 1.0
+    }
+  ]
+}

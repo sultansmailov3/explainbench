@@ -1,0 +1,10 @@
+model,condition,vs,n_pairs,mean_diff,ci_lo,ci_hi,better_than_baseline,worse_than_baseline,p_mcnemar_exact,p_holm
+llama3.1:8b,correct_expl,code_only,40,-0.0167,-0.05,0.0,0,1,1.0,1.0
+llama3.1:8b,docs,code_only,40,0.0,0.0,0.0,0,0,1.0,1.0
+llama3.1:8b,misleading_expl,code_only,40,-0.0167,-0.05,0.0,0,1,1.0,1.0
+qwen2.5-coder:1.5b,correct_expl,code_only,40,0.1,0.0167,0.2,4,0,0.125,1.0
+qwen2.5-coder:1.5b,docs,code_only,40,0.0,-0.05,0.0417,0,1,1.0,1.0
+qwen2.5-coder:1.5b,misleading_expl,code_only,40,-0.0417,-0.125,0.0417,1,3,0.625,1.0
+qwen2.5-coder:7b,correct_expl,code_only,40,0.0,0.0,0.0,0,0,1.0,1.0
+qwen2.5-coder:7b,docs,code_only,40,0.0,0.0,0.0,0,0,1.0,1.0
+qwen2.5-coder:7b,misleading_expl,code_only,40,0.0,0.0,0.0,0,0,1.0,1.0

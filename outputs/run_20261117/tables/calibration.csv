@@ -1,0 +1,13 @@
+model,condition,n_with_confidence,n_runs,mean_confidence,accuracy,overconfidence_gap,brier,ece
+llama3.1:8b,code_only,120,120,0.9205,1.0,-0.0795,0.0076,0.0795
+llama3.1:8b,correct_expl,120,120,0.9338,0.9833,-0.0495,0.0192,0.0495
+llama3.1:8b,docs,120,120,0.9238,1.0,-0.0762,0.0069,0.0762
+llama3.1:8b,misleading_expl,120,120,0.9228,0.9833,-0.0606,0.022,0.0606
+qwen2.5-coder:1.5b,code_only,120,120,0.9983,0.55,0.4483,0.4502,0.4483
+qwen2.5-coder:1.5b,correct_expl,120,120,0.9948,0.65,0.3448,0.347,0.3448
+qwen2.5-coder:1.5b,docs,120,120,0.9983,0.55,0.4483,0.4502,0.4483
+qwen2.5-coder:1.5b,misleading_expl,120,120,1.0,0.5083,0.4917,0.4917,0.4917
+qwen2.5-coder:7b,code_only,120,120,0.9571,1.0,-0.0429,0.0022,0.0429
+qwen2.5-coder:7b,correct_expl,120,120,0.9654,1.0,-0.0346,0.0017,0.0346
+qwen2.5-coder:7b,docs,120,120,0.9642,1.0,-0.0358,0.0018,0.0358
+qwen2.5-coder:7b,misleading_expl,120,120,0.9621,1.0,-0.0379,0.0019,0.0379

@@ -1,0 +1,47 @@
+{
+  "date_utc": "2026-11-16T21:17:02+00:00",
+  "python": "3.13.15",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "models": {
+    "qwen2.5-coder:7b": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+    "llama3.1:8b": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+    "qwen2.5-coder:1.5b": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668"
+  },
+  "conditions": [
+    "code_only",
+    "docs",
+    "correct_expl",
+    "misleading_expl"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "temperature": 0.2,
+  "max_tokens": 1024,
+  "n_instances": 40,
+  "mock": false,
+  "tasks_sha256": {
+    "t01_sum_to_n": "31e83c61f18a081e001250d517ca1d4c70fbc363689e2733c5b2fee396a025e6",
+    "t02_first_zero": "1c66c1f813d035a56806ff865e4fb99e1da86f02e4d07c5e5fa3d777d79e14f9",
+    "t03_factorial": "2d5a778b3acca6e1bd074c50cbf91e8b5eb6edaf0cdf29716b6e1ebfb2fd6ea3",
+    "t04_is_adult": "b6d61a76edd1a6a0cce2d27f2c665698fa23da553bd7dbec7a789f877cdc6d97",
+    "t05_count_items": "c316cc943692009bdec130a7136241fb9eb7e66f74a99ebf08a56c76ed43e85e",
+    "t06_max_of_list": "d2676af680d2cd15e35dc6d6d99fee91296c78d7d66dd52b9c70110b2bcdf458",
+    "t07_count_vowels": "2d167a7905d9454a70823f61ddb6ba65a1ced2a30dc43d2093e54468dd5518c9",
+    "t08_reverse_list": "513e18e193be88e471edebb8d1146e4af099c69941b4fd662e1c475f391e659b",
+    "t09_is_palindrome": "1bb9fdd29ad72b0e9e228488a08caa0fabe46caf7905be4f9e83534218ccdfa0",
+    "t10_in_range": "55e874e79849a6b91272ee96988c857747e4a5f4e4db9a11a0b1526ecc739259",
+    "t11_fibonacci": "a878bcf84225025d6ee03ce5f93c14d4df14d3edd516a0cdc0c899a087558b05",
+    "t12_power": "0c30046f46f17010ea8737394c3d3f2ef04438bce1175e3386e5702c30a33588",
+    "t13_sum_digits": "234d23b1f8e31bfc903702a0239cbe7291fdaeb7ad506b589f75a422a66ce20a",
+    "t14_count_positive": "b1c3c1860a98e907d21f63cf024d70b04a11c4acfca2e686bf3ab18d311375c4",
+    "t15_unique_items": "93c48be9777c9646cf3f054b88aa1b69cb9e8b5858114ac635e58b99e56b332c",
+    "t16_group_by_first_letter": "eaf5b680a1aa8b66fea0ca31b123513c2cf80bfb327f62fc421b81f1f674d8d8",
+    "t17_index_of": "536131387ec12d53c3fd97dd4c49319c866e234e474a967dd46e239a27d8c181",
+    "t18_is_leap_year": "a9e1e40f83b1779fbeaaa903fd77c870b49a5e8ea0cea8f682f293822e3d966e",
+    "t19_min_index": "58489f45b87be37c9b41913cec051da71a11b17791f0b99e066ff2bb768539f7",
+    "t20_running_total": "77920ab13829d0fc60b9c1c154ae6939ea22b931676c769fc6279bf76db99963"
+  }
+}
