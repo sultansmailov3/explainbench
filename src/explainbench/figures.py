@@ -88,7 +88,7 @@ def fig_pass_at_1(run: Path, out: Path):
     ax.set_xticklabels(models, fontsize=8)
     ax.set_ylabel("pass@1 (95% bootstrap CI)")
     ax.set_ylim(0, 1.05)
-    ax.legend(frameon=False, fontsize=8, ncol=2)
+    ax.legend(frameon=False, fontsize=8, ncol=4, loc="lower center", bbox_to_anchor=(0.5, 1.0))
     _save(fig, out, "fig_pass_at_1")
     plt.close(fig)
 
@@ -113,7 +113,7 @@ def fig_calibration(run: Path, out: Path):
     ax.set_xticks(range(len(models)))
     ax.set_xticklabels(models, fontsize=8)
     ax.set_ylabel("Mean confidence - accuracy")
-    ax.legend(frameon=False, fontsize=8, ncol=2)
+    ax.legend(frameon=False, fontsize=8, ncol=4, loc="lower center", bbox_to_anchor=(0.5, 1.0))
     _save(fig, out, "fig_calibration")
     plt.close(fig)
 
