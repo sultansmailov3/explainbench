@@ -42,7 +42,7 @@ active rather than hand over a fix, because over-reliance is a recurring concern
 An explanation is not always right. A model asked to describe a buggy function may describe the
 intended behaviour instead of the actual one, and the result reads as a fluent endorsement of
 faulty code. Studies of AI-assisted decision making show that incorrect explanations can mislead
-people even when the underlying advice is sound (Morrison et al. 2023; Spitzer et al. 2024; Cabitza et al. 2024). Much less is known about the
+people even when the underlying advice is sound (Spitzer et al. 2024; Cabitza et al. 2024). Much less is known about the
 machine side of the same situation. Explanations are routinely passed back to models as context -
 in tutoring pipelines, in repair tools that add feedback to the prompt (Koutcheme et al. 2024; Campos et al. 2025), and in agent
 loops - and language models are known to be sensitive to context that should not change the answer
@@ -99,15 +99,15 @@ fixed: what the prompt says about the code.
 
 **Context sensitivity and misleading explanations.** Irrelevant sentences in a problem statement
 reduce model accuracy on arithmetic reasoning (Shi et al. 2023). In human-AI decision making, incorrect
-explanations impair performance and later reasoning (Morrison et al. 2023; Spitzer et al. 2024), and persuasive but wrong explanations
+explanations impair performance and later reasoning (Spitzer et al. 2024), and persuasive but wrong explanations
 can stop people from checking correct advice (Cabitza et al. 2024). Our misleading-explanation condition is the
 model-side analogue.
 
 **Test adequacy.** A repair counts as correct only relative to its tests. Patches that pass a weak
 suite yet remain wrong are a known problem in test-based repair (Yu et al. 2019; Xin and Reiss 2017). Mutation analysis measures
 a suite by the seeded faults it detects (Jia and Harman 2011); mutant detection correlates with real-fault detection
-(Just et al. 2014), and the technique has been applied to the test suites of programming-assignment graders (Clegg 2021).
-Benchmark problems that appear in training data are a further threat to evaluation (Riddell et al. 2024; Roberts et al. 2023). We
+(Just et al. 2014).
+Benchmark problems that appear in training data are a further threat to evaluation (Riddell et al. 2024). We
 therefore validate our suite before using it and write the tasks and bugs ourselves.
 
 **Table 1. Closest studies.** (complete after reading the full papers)
@@ -146,7 +146,7 @@ Forty bug instances were seeded by hand, two per task, in five categories taken 
 course assignments: off-by-one (7), loop condition (10), base case (8), boundary/operator (9) and
 data-structure update (6). Each instance differs from its reference by a small edit. Tasks and
 bugs were written for this study rather than taken from a public benchmark, to limit the chance
-that they appear verbatim in model training data (Riddell et al. 2024; Roberts et al. 2023); the task types themselves are common.
+that they appear verbatim in model training data (Riddell et al. 2024); the task types themselves are common.
 
 ### 3.3 Suite validation
 Before any model was run, the suite was validated (`explainbench.validate`): (i) every reference
@@ -178,7 +178,7 @@ run, explanations were not edited; the primary analysis of this condition uses t
 labelled accurate or partial, and the analysis of all 40 is reported as a sensitivity analysis.
 
 Code only is the baseline because it is the standard input of repair benchmarks (Koutcheme et al. 2024; Lin et al. 2017); the
-documentation condition controls for the mere presence of extra, true, non-specific text.
+notes condition controls for the mere presence of extra, true, non-specific text.
 
 ### 3.5 Models and procedure
 Three open-weight models were run locally through Ollama 0.40.16 with their default tags:
@@ -360,7 +360,7 @@ but uneven in other respects (Oli et al. 2023), and it matters for tools that sh
 boundary/operator bugs, and accepted a hard-coded solution. Had we scored repairs with such a suite,
 unchanged buggy code would often have counted as a successful repair. This agrees with the
 literature on patches that overfit weak tests (Yu et al. 2019; Xin and Reiss 2017) and supports checking a suite with seeded
-faults before using it as an oracle (Jia and Harman 2011; Clegg 2021).
+faults before using it as an oracle (Jia and Harman 2011; Just et al. 2014).
 
 **Implications for benchmark design.** The ceiling reached by two mid-sized local models is itself
 informative. Single-edit faults in introductory exercises, the staple of debugging instruction, no
