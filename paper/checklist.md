@@ -10,8 +10,8 @@
 | Explanation audit confirmed by the author (human) | done (author's statement, 2026-11-17) |
 | Classify 5 surviving generated mutants | done by AI assistant (all equivalent, `docs/equivalent_mutants.md`); confirmed by author |
 | Read all cited sources; fix items marked (verify); add sources for McNemar, bootstrap, Brier | **to do** |
-| Choose primary + backup journal; verify in Scopus; Appendix A; 3 related articles | done (Scopus and hijacked check 2026-11-17); author-guideline rows still (verify) |
-| Move manuscript into journal template; reference style | **to do** |
+| Choose primary + backup journal; verify in Scopus; Appendix A; 3 related articles | done (Scopus and hijacked check 2026-11-17); primary-journal guidelines read; backup-journal rows still (verify) |
+| Manuscript per journal guidelines | .docx built, name-year citations, Statements and Declarations, AI use in Methods; reference entries not yet in exact Springer format |
 | Declarations | drafted in DECLARATIONS.md; author to confirm funding and data licence |
 | Cover letter: fill journal-specific parts | **to do** |
 | Similarity check | **to do** |

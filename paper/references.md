@@ -26,7 +26,7 @@ that were not fully confirmed in the search. 21 of 30 are from 2021-2026.
 15. Guo, C., Pleiss, G., Sun, Y., & Weinberger, K. Q. (2017). On calibration of modern neural networks. ICML 2017, PMLR 70, 1321-1330.
 16. Kadavath, S., et al. (2022). Language models (mostly) know what they know. arXiv:2207.05221.
 17. Wang, S., et al. (2025). Open the Oyster: Empirical evaluation and improvement of code reasoning confidence in LLMs. arXiv:2511.02197. (verify author list)
-18. (authors to verify) (2025). Do code models suffer from the Dunning-Kruger effect? arXiv:2510.05457.
+18. Singh, M., Chatterjee, S., Radhakrishna, A., & Gulwani, S. (2025). Do code models suffer from the Dunning-Kruger effect? arXiv:2510.05457. https://doi.org/10.48550/arXiv.2510.05457
 
 ## Context sensitivity and misleading explanations
 19. Shi, F., Chen, X., Misra, K., Scales, N., Dohan, D., Chi, E. H., Scharli, N., & Zhou, D. (2023). Large language models can be easily distracted by irrelevant context. ICML 2023, PMLR 202, 31210-31227.
@@ -49,7 +49,7 @@ that were not fully confirmed in the search. 21 of 30 are from 2021-2026.
 ## Target-journal articles
 31. Alhanahnah, M., Hasan, M. R., Xu, L., & Bagheri, H. (2025). An empirical evaluation of pre-trained large language models for repairing declarative formal specifications. Empirical Software Engineering, 30, 149. https://doi.org/10.1007/s10664-025-10687-1
 32. Ouedraogo, W. C., et al. (2026). Prompt engineering in LLMs for automated unit test generation: A large-scale study. Empirical Software Engineering, 31, 103. https://doi.org/10.1007/s10664-026-10840-4
-33. (verify) (2026). LLM-generated code security with real developer prompts. Empirical Software Engineering. https://doi.org/10.1007/s10664-026-10812-8
+33. (not cited) (verify) (2026). LLM-generated code security with real developer prompts. Empirical Software Engineering. https://doi.org/10.1007/s10664-026-10812-8
 
 Still needed (find, read, add): a source for McNemar's test, the bootstrap, the Brier score, and
 >= 3 recent articles from the chosen target journal (Journal Fit Statement).

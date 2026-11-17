@@ -1,8 +1,8 @@
 # Appendix A. Journal Fit Statement (draft, 2026-11-17)
 
 Scopus rows were checked on 2026-11-17 in the author's browser on scopus.com (source records) and in the
-Retraction Watch Hijacked Journal Checker. The Springer submission-guidelines page could not be read by
-the assistant, so guideline rows marked (verify) are still open.
+Retraction Watch Hijacked Journal Checker. Primary-journal guideline rows come from the journal's Submission guidelines page (read 2026-11-17);
+backup-journal rows marked (verify) are still open.
 Items marked (verify) were not confirmed on an official page.
 
 | Item | Primary journal | Backup journal |
@@ -15,11 +15,11 @@ Items marked (verify) were not confirmed on an official page.
 | Official website (reach it via Scopus record or publisher) | https://link.springer.com/journal/10664 ; submissions via Editorial Manager (editorialmanager.com/emse) | https://www.sciencedirect.com/journal/computers-and-education-artificial-intelligence (verify) |
 | Scope fit (one sentence) | Empirical study of LLM-based program repair, test-suite adequacy and confidence; the journal explicitly solicits negative results and replications | AI in education; the study is motivated by LLM explanations for novice programmers, but has no learners, so fit is weaker |
 | Three related articles, last 3 years | see below | two found, third still needed (see below) |
-| Word limit, template, reference style | no fixed limit known (verify); Springer Nature LaTeX or Word template; author-year references (verify in Submission guidelines) | (verify in Guide for Authors) |
-| APC / open access | hybrid: subscription route without APC, optional open access with APC (verify) | open-access journal; APC applies (USD 1,800 according to a secondary site - verify amount and waivers) |
-| Data policy | (verify; EMSE promotes open science - repository link and DOI recommended) | (verify) |
-| AI policy | Springer Nature policy: AI tools are not authors; use must be documented (verify exact wording) | Elsevier policy: declaration of generative AI use in a dedicated section (verify) |
-| Typical review time | (verify on journal page) | (verify) |
+| Word limit, template, reference style | no word limit stated; .docx or LaTeX (no Word template; Springer Nature LaTeX template recommended); abstract 150-250 words; 4-6 keywords; citations by name and year, alphabetical reference list with full DOI links | (verify in Guide for Authors) |
+| APC / open access | no submission or publication fee; optional open access after acceptance with an article processing fee | open-access journal; APC applies (USD 1,800 according to a secondary site - verify amount and waivers) |
+| Data policy | data availability statement required; public repository strongly encouraged | (verify) |
+| AI policy | LLMs cannot be authors; use of an LLM must be documented in the Methods section (copy-editing use need not be declared) | Elsevier policy: declaration of generative AI use (verify) |
+| Typical review time | single-blind review; first decision typically in under three months (journal guidelines) | (verify) |
 | Red flags | none seen: established publisher, named editors-in-chief | none seen: established publisher |
 
 ## Related articles in the primary journal (to read and cite)

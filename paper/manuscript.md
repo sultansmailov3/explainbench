@@ -3,7 +3,7 @@
 Sultan Kalzhigit, Astana IT University (SE-2416)
 
 > DRAFT v0.2 (2026-11-17). All numbers come from `outputs/validation/` and
-> `outputs/run_20261117/tables/`. Citations [n] refer to `paper/references.md`; the author reports having read the cited sources.
+> `outputs/run_20261117/tables/`. Citations (name year) refer to `paper/references.md`; the author reports having read the cited sources.
 > Still to do by the author: move the text into the journal template and reference style.
 
 ## Abstract
@@ -31,25 +31,25 @@ analysis; prompt context; test adequacy
 ## 1. Introduction
 Generative language models are now part of how beginners learn to program. Controlled and
 observational studies describe both benefits and risks: learners supported by a code generator
-completed authoring tasks more successfully without a measured loss on later manual tasks [1],
+completed authoring tasks more successfully without a measured loss on later manual tasks (Kazemitabaar et al. 2023),
 students rated model-written code explanations as more accurate and easier to understand than
-explanations written by peers [2], and observations of novices working with a code assistant
-documented cognitive and metacognitive difficulties [3]. Explanations of code are among the most
+explanations written by peers (Leinonen et al. 2023), and observations of novices working with a code assistant
+documented cognitive and metacognitive difficulties (Prather et al. 2023). Explanations of code are among the most
 common kinds of support, and their properties are known to shift with the prompt, the code, the
-language and the model version [4]. Recent tools for novice debugging try to keep the learner
-active rather than hand over a fix, because over-reliance is a recurring concern [7, 8].
+language and the model version (Oli et al. 2023). Recent tools for novice debugging try to keep the learner
+active rather than hand over a fix, because over-reliance is a recurring concern (Kurniawan et al. 2025; Ma et al. 2023).
 
 An explanation is not always right. A model asked to describe a buggy function may describe the
 intended behaviour instead of the actual one, and the result reads as a fluent endorsement of
 faulty code. Studies of AI-assisted decision making show that incorrect explanations can mislead
-people even when the underlying advice is sound [20, 21, 22]. Much less is known about the
+people even when the underlying advice is sound (Morrison et al. 2023; Spitzer et al. 2024; Cabitza et al. 2024). Much less is known about the
 machine side of the same situation. Explanations are routinely passed back to models as context -
-in tutoring pipelines, in repair tools that add feedback to the prompt [9, 11], and in agent
+in tutoring pipelines, in repair tools that add feedback to the prompt (Koutcheme et al. 2024; Campos et al. 2025), and in agent
 loops - and language models are known to be sensitive to context that should not change the answer
-[19]. If a misleading explanation lowers repair accuracy while leaving stated confidence
+(Shi et al. 2023). If a misleading explanation lowers repair accuracy while leaving stated confidence
 unchanged, any system that chains explanation and repair inherits that failure. Calibration of
 code models is itself an open problem: generated code is frequently accompanied by confidence that
-does not track correctness [14, 17, 18].
+does not track correctness (Spiess et al. 2025; Wang et al. 2025; Singh et al. 2025).
 
 This paper grew out of a planned classroom study on whether LLM explanations affect novices'
 independent debugging. That study requires human participants and prior ethical approval and is
@@ -75,51 +75,51 @@ results, Section 5 discusses them and their limits, and Section 6 concludes.
 ## 2. Related Work
 **LLM explanations for novices.** Work on model-written explanations has mostly evaluated their
 quality or their reception by learners. Explanations were judged favourably against student-written
-ones [2]; their correctness is typically high while completeness, conciseness and specificity lag
-[4]; and a large randomised classroom comparison examined whether explanations that stress
-different aspects of a program help more than generic ones [5]. Qualitative work on novices solving
-tracing problems with a chatbot available shows varied patterns of use [6]. These studies treat the
+ones (Leinonen et al. 2023); their correctness is typically high while completeness, conciseness and specificity lag
+(Oli et al. 2023); and a large randomised classroom comparison examined whether explanations that stress
+different aspects of a program help more than generic ones (Bernstein et al. 2026). Qualitative work on novices solving
+tracing problems with a chatbot available shows varied patterns of use (Adeeb et al. 2025). These studies treat the
 explanation as an output for a human reader. We treat it as an input to a model.
 
 **LLM-based repair of novice programs.** Repair of student programs with language models has
-moved from single systems evaluated on a few hundred submissions [10] to shared benchmarks with
+moved from single systems evaluated on a few hundred submissions (Zhang et al. 2022) to shared benchmarks with
 functional-correctness metrics such as pass@k, in which the prompt may also carry extra context
-such as grader feedback [9]. Evaluations across languages report that adding failing-test
-information to the prompt improves repair [11]. Small single-function benchmarks with one-line
-defects [12] and hand-written function-level benchmarks scored by unit tests [13] established the
+such as grader feedback (Koutcheme et al. 2024). Evaluations across languages report that adding failing-test
+information to the prompt improves repair (Campos et al. 2025). Small single-function benchmarks with one-line
+defects (Lin et al. 2017) and hand-written function-level benchmarks scored by unit tests (Chen et al. 2021) established the
 evaluation style we follow. Recent empirical studies in software engineering likewise evaluate language models on repair
-beyond conventional code [31] and examine how prompt design changes the quality of generated
-tests [32]. None of these studies varies the *truthfulness* of the added context.
+beyond conventional code (Alhanahnah et al. 2025) and examine how prompt design changes the quality of generated
+tests (Ouedraogo et al. 2026). None of these studies varies the *truthfulness* of the added context.
 
-**Confidence and calibration.** Modern neural networks are often miscalibrated [15]. Language
-models can be asked to assess their own answers, with encouraging but task-dependent results [16].
+**Confidence and calibration.** Modern neural networks are often miscalibrated (Guo et al. 2017). Language
+models can be asked to assess their own answers, with encouraging but task-dependent results (Kadavath et al. 2022).
 For code, studies find that confidence is not well aligned with correctness without correction
-[14], that calibration of code reasoning can be improved with prompting and post-hoc scaling [17],
-and that weaker models overestimate themselves most [18]. We add one factor these studies hold
+(Spiess et al. 2025), that calibration of code reasoning can be improved with prompting and post-hoc scaling (Wang et al. 2025),
+and that weaker models overestimate themselves most (Singh et al. 2025). We add one factor these studies hold
 fixed: what the prompt says about the code.
 
 **Context sensitivity and misleading explanations.** Irrelevant sentences in a problem statement
-reduce model accuracy on arithmetic reasoning [19]. In human-AI decision making, incorrect
-explanations impair performance and later reasoning [20, 21], and persuasive but wrong explanations
-can stop people from checking correct advice [22]. Our misleading-explanation condition is the
+reduce model accuracy on arithmetic reasoning (Shi et al. 2023). In human-AI decision making, incorrect
+explanations impair performance and later reasoning (Morrison et al. 2023; Spitzer et al. 2024), and persuasive but wrong explanations
+can stop people from checking correct advice (Cabitza et al. 2024). Our misleading-explanation condition is the
 model-side analogue.
 
 **Test adequacy.** A repair counts as correct only relative to its tests. Patches that pass a weak
-suite yet remain wrong are a known problem in test-based repair [26, 27]. Mutation analysis measures
-a suite by the seeded faults it detects [23]; mutant detection correlates with real-fault detection
-[24], and the technique has been applied to the test suites of programming-assignment graders [25].
-Benchmark problems that appear in training data are a further threat to evaluation [28, 29]. We
+suite yet remain wrong are a known problem in test-based repair (Yu et al. 2019; Xin and Reiss 2017). Mutation analysis measures
+a suite by the seeded faults it detects (Jia and Harman 2011); mutant detection correlates with real-fault detection
+(Just et al. 2014), and the technique has been applied to the test suites of programming-assignment graders (Clegg 2021).
+Benchmark problems that appear in training data are a further threat to evaluation (Riddell et al. 2024; Roberts et al. 2023). We
 therefore validate our suite before using it and write the tasks and bugs ourselves.
 
 **Table 1. Closest studies.** (complete after reading the full papers)
 
 | Study | Subjects | Task | Context varied | Misleading context | Confidence measured |
 |---|---|---|---|---|---|
-| Koutcheme et al. [9] | LLMs | repair of student programs | optional feedback | no | no |
-| Campos et al. [11] | LLMs | repair, several languages | failing-test information | no | no |
-| Spiess et al. [14] | LLMs | completion, synthesis, repair | - | no | yes |
-| Shi et al. [19] | LLMs | arithmetic word problems | irrelevant sentences | irrelevant, not false | no |
-| Spitzer et al. [21] | humans | AI-assisted decisions | explanation correctness | yes | (verify) |
+| Koutcheme et al. (2024) | LLMs | repair of student programs | optional feedback | no | no |
+| Campos et al. (2025) | LLMs | repair, several languages | failing-test information | no | no |
+| Spiess et al. (2025) | LLMs | completion, synthesis, repair | - | no | yes |
+| Shi et al. (2023) | LLMs | arithmetic word problems | irrelevant sentences | irrelevant, not false | no |
+| Spitzer et al. (2024) | humans | AI-assisted decisions | explanation correctness | yes | (verify) |
 | **This work** | open-weight LLMs | repair of seeded novice bugs | none / docs / accurate / misleading explanation | **yes** | **yes** |
 
 **Gap.** Repair studies vary how much context a model receives but not whether it is true;
@@ -147,7 +147,7 @@ Forty bug instances were seeded by hand, two per task, in five categories taken 
 course assignments: off-by-one (7), loop condition (10), base case (8), boundary/operator (9) and
 data-structure update (6). Each instance differs from its reference by a small edit. Tasks and
 bugs were written for this study rather than taken from a public benchmark, to limit the chance
-that they appear verbatim in model training data [28, 29]; the task types themselves are common.
+that they appear verbatim in model training data (Riddell et al. 2024; Roberts et al. 2023); the task types themselves are common.
 
 ### 3.3 Suite validation
 Before any model was run, the suite was validated (`explainbench.validate`): (i) every reference
@@ -178,7 +178,7 @@ is not identified, or is called correct). Following the protocol amendment made 
 run, explanations were not edited; the primary analysis of this condition uses the 33 instances
 labelled accurate or partial, and the analysis of all 40 is reported as a sensitivity analysis.
 
-Code only is the baseline because it is the standard input of repair benchmarks [9, 12]; the
+Code only is the baseline because it is the standard input of repair benchmarks (Koutcheme et al. 2024; Lin et al. 2017); the
 documentation condition controls for the mere presence of extra, true, non-specific text.
 
 ### 3.5 Models and procedure
@@ -209,13 +209,20 @@ The unit of analysis is the bug instance; seeds are averaged within instance and
 as independent observations. For each model and each non-baseline condition we report the mean
 paired difference to code only with a percentile bootstrap 95% interval (10,000 resamples of
 instances), and an exact McNemar test on instance-level success (majority of seeds). P-values are
-Holm-adjusted [30] across all model-by-condition comparisons; alpha = .05. Hypotheses: H1,
+Holm-adjusted (Holm 1979) across all model-by-condition comparisons; alpha = .05. Hypotheses: H1,
 misleading explanations lower pass@1; H2, accurate explanations change pass@1 (two-sided); H3,
 misleading explanations raise the over-confidence gap.
 
-### 3.7 Ethics and reproducibility
+### 3.7 Ethics, reproducibility and use of AI tools
 No human participants were involved. Code, tasks, explanations, raw responses, per-case logs and
 analysis scripts are in the repository; the README maps each table and figure to a command.
+
+In line with the journal's policy on large language models, we document their use here. Apart from
+the models under study, an AI assistant (Claude, Anthropic) wrote most of the benchmark and
+analysis code, drafted the tasks and seeded bugs, launched the experiment on the author's
+computer, made the first-pass audit of explanations and the classification of surviving mutants,
+searched for literature and drafted the manuscript text. The author reviewed these materials and
+is accountable for the content.
 
 ## 4. Results
 ### 4.1 Suite validation
@@ -336,10 +343,10 @@ large effects. We therefore report H1 and H2 as not supported rather than refute
 declared near-certainty in every run and, in close to half of them, handed back the code it was
 asked to fix. An explanation that pointed at the fault roughly halved that behaviour, whereas true
 but non-specific notes had no effect at all. This is consistent with reports that code models'
-confidence does not track correctness [14] and that weaker models overestimate themselves most
-[18], and with findings that repair improves when the prompt carries information that localises
-the failure [11]. It does not match the sensitivity to added context reported for arithmetic
-problems [19]: here irrelevant-but-true text changed nothing, and false text changed little. One
+confidence does not track correctness (Spiess et al. 2025) and that weaker models overestimate themselves most
+(Singh et al. 2025), and with findings that repair improves when the prompt carries information that localises
+the failure (Campos et al. 2025). It does not match the sensitivity to added context reported for arithmetic
+problems (Shi et al. 2023): here irrelevant-but-true text changed nothing, and false text changed little. One
 reading is that single-edit bugs in ten-line functions leave little for a misleading sentence to
 disturb once a model can see the fault at all; this is a conjecture, not something we tested.
 
@@ -347,14 +354,14 @@ disturb once a model can see the fault at all; this is a conjecture, not somethi
 were free of false statements, and 7 missed the fault entirely, although the same model repaired
 every one of these bugs when asked to. Fluent explanations of buggy code from an 8B model are thus
 frequently wrong in detail. This echoes work that finds model-written explanations mostly correct
-but uneven in other respects [4], and it matters for tools that show such explanations to novices
-[7, 8]: the explanations were worse than the repairs.
+but uneven in other respects (Oli et al. 2023), and it matters for tools that show such explanations to novices
+(Kurniawan et al. 2025; Ma et al. 2023): the explanations were worse than the repairs.
 
 **Suite validation.** A four-case suite of typical inputs missed 11 of 40 seeded bugs and 7 of 9
 boundary/operator bugs, and accepted a hard-coded solution. Had we scored repairs with such a suite,
 unchanged buggy code would often have counted as a successful repair. This agrees with the
-literature on patches that overfit weak tests [26, 27] and supports checking a suite with seeded
-faults before using it as an oracle [23, 25].
+literature on patches that overfit weak tests (Yu et al. 2019; Xin and Reiss 2017) and supports checking a suite with seeded
+faults before using it as an oracle (Jia and Harman 2011; Clegg 2021).
 
 **Implications for benchmark design.** The ceiling reached by two mid-sized local models is itself
 informative. Single-edit faults in introductory exercises, the staple of debugging instruction, no
@@ -362,7 +369,7 @@ longer discriminate between conditions for models of 7-8B parameters, and any fu
 context effects on repair needs items that such models fail at a meaningful rate under the
 baseline. Options that preserve the educational setting include multi-fault programs, faults that
 require understanding an ambiguous specification, and authentic incorrect student submissions,
-as collected in educational repair benchmarks [9]. The validation step used here transfers
+as collected in educational repair benchmarks (Koutcheme et al. 2024). The validation step used here transfers
 directly to such items: seeded faults and alternative correct solutions expose a weak oracle
 regardless of how hard the underlying task is.
 
@@ -397,6 +404,6 @@ real student bugs so that capable models are below ceiling, more instances and a
 rater, confidence derived from token probabilities, and - with ethical approval - the classroom
 study that motivated this project.
 
-## Declarations
+## Statements and Declarations
 See `DECLARATIONS.md` (data and code availability, CRediT, AI use, conflict of interest, funding,
 ethics).
